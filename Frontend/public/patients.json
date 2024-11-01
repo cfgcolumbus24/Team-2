@@ -1,0 +1,31 @@
+[
+    {
+      "Name": "Robert Aguilar",
+      "DOB": "5/18/2006",
+      "Age": 18,
+      "Ethnicity": "Asian",
+      "Severity": "Moderate",
+      "Frequency of visits": 11,
+      "Diagnosis": "COPD",
+      "Procedure": "Surgery",
+      "Primary doctor/physician": "Brenda Robbins",
+      "Treatment plan": "Physical Therapy",
+      "Medication": "Atorvastatin",
+      "Emergency contact": "617-508-2031x30261"
+    },
+    {
+      "Name": "Lynn Callahan",
+      "DOB": "8/25/1980",
+      "Age": 44,
+      "Ethnicity": "Pacific Islander",
+      "Severity": "Moderate",
+      "Frequency of visits": 9,
+      "Diagnosis": "Hypertension",
+      "Procedure": "X-Ray",
+      "Primary doctor/physician": "Cory Perez",
+      "Treatment plan": "Physical Therapy",
+      "Medication": "Levothyroxine",
+      "Emergency contact": "(765)810-0076"
+    }
+  ]
+  
