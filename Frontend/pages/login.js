@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const LoginButton = ({ role }) => {
+const LoginButton = ({ role, onClick }) => {
   return (
-    <button className="loginButton">
+    <button className="loginButton" onClick={onClick}>
       {role}
     </button>
   );
@@ -12,10 +12,14 @@ const LoginAuthentication = () => {
   const roles = ['Login'];
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [notification, setNotification] = useState('');
 
   const handleLogin = () => {
-    console.log("Logging in with:", { username, password });
-    // Add actual login handling here
+    if (username === 'jeffdoe@gmail.com' && password === 'password123') {
+      setNotification('Login Successful');
+    } else {
+      setNotification('Incorrect Email or Password');
+    }
   };
 
   return (
@@ -32,7 +36,7 @@ const LoginAuthentication = () => {
         </header>
         <h2 className="loginTitle">Log In:</h2>
         
-        {/* Username Textbox */}
+        {/* Email Textbox */}
         <input
           type="text"
           placeholder="Email"
@@ -55,6 +59,9 @@ const LoginAuthentication = () => {
             <LoginButton key={index} role={role} onClick={handleLogin} />
           ))}
         </nav>
+        
+        {/* Notification Message */}
+        {notification && <p className="notification">{notification}</p>}
       </section>
     </main>
   );

@@ -20,11 +20,6 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/clinical": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/clinical.js"
-    ],
     "/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
