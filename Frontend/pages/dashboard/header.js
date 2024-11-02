@@ -19,7 +19,7 @@ const Header = () => {
         </h1>
       </div>
       <nav className={styles.nav}>
-        <Link href="/" className={`${styles.navItem} ${router.pathname === '/' ? styles.active : ''}`}>
+        <Link href="/" className={`${styles.navItem} ${(router.pathname === '/' || router.pathname === '/mainDashboard') ? styles.active : ''}`}>
           Home
         </Link>
         <Link href="/clinical" className={`${styles.navItem} ${router.pathname === '/clinical' ? styles.active : ''}`}>

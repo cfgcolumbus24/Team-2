@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const LoginButton = ({ role, onClick }) => {
@@ -6,6 +6,74 @@ const LoginButton = ({ role, onClick }) => {
     <button className="loginButton" onClick={onClick}>
       {role}
     </button>
+  );
+};
+
+const ConnectionModal = ({ onClose }) => {
+  const [connections, setConnections] = useState({
+    EHR: false,
+    Financial: false,
+    Avatar: false,
+  });
+
+  const handleConnect = (type) => {
+    const popup = window.open('https://www.microsoft.com', '_blank', 'width=600,height=600');
+
+    const checkPopupClosed = setInterval(() => {
+      if (popup.closed) {
+        clearInterval(checkPopupClosed);
+        setConnections((prevConnections) => ({
+          ...prevConnections,
+          [type]: true,
+        }));
+      }
+    }, 500);
+  };
+
+  const allConnected = Object.values(connections).every((status) => status);
+
+  useEffect(() => {
+    if (allConnected) {
+      onClose();
+    }
+  }, [allConnected, onClose]);
+
+  return (
+    <div className="modalOverlay">
+      <div className="modalContent">
+        <h2>Link Data Sources</h2>
+        <div style={{ marginBottom: '15px',  }}>
+          <span>Link EHR Data    </span>
+         
+              
+
+          <button
+            onClick={() => handleConnect('EHR')}
+            className={`connectButton ${connections.EHR ? 'connected' : ''}`}
+          >
+            {connections.EHR ? 'Connected' : 'Connect'}
+          </button>
+        </div>
+        <div style={{ marginBottom: '15px' }}>
+          <span>Link Financial Data      </span>
+          <button
+            onClick={() => handleConnect('Financial')}
+            className={`connectButton ${connections.Financial ? 'connected' : ''}`}
+          >
+            {connections.Financial ? 'Connected' : 'Connect'}
+          </button>
+        </div>
+        <div style={{ marginBottom: '15px' }}>
+          <span>Link Avatar Data       </span>
+          <button
+            onClick={() => handleConnect('Avatar')}
+            className={`connectButton ${connections.Avatar ? 'connected' : ''}`}
+          >
+            {connections.Avatar ? 'Connected' : 'Connect'}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -45,7 +113,7 @@ const LoginAuthentication = () => {
         <header className="logoContainer">
           <div className="logoWrapper">
             <img 
-              src="/Logo.png"  /* Path to image in the public folder */
+              src="/Logo.png"  
               alt="Net2Connect Logo" 
               className="logoImage" 
             />
@@ -96,9 +164,11 @@ const LoginAuthentication = () => {
           </>
         )}
         
-        {/* Notification Message */}
         {notification && <p className="notification">{notification}</p>}
       </section>
+
+      {/* Connection Modal */}
+      {showModal && <ConnectionModal onClose={handleModalClose} />}
     </main>
   );
 };

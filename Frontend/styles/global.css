@@ -747,3 +747,42 @@ h1 {
 .logoutButton:hover {
   background-color: #ff4040;
 }
+
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.connectButton {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.connectButton.connected {
+  background-color: #28a745;
+}
+
+.connectButton:not(.connected) {
+  background-color: #0070f3;
+}
