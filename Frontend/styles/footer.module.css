@@ -1,0 +1,161 @@
+.footer {
+  padding: 3rem 1rem; 
+  background-color: #fff;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  position: relative;
+  margin: 0 3rem; 
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footerLogo {
+  width: 60px; 
+}
+
+.topButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footerButton1, .footerButton2 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px 35px; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footerButton1 {
+  background-color: #3081E2;
+  color: #fff;
+}
+
+.footerButton2 {
+  background-color: #C0E4FC;
+  color: #0A487C;
+}
+
+.footerButton1:hover, .footerButton2:hover {
+  background-color: #2563eb;
+}
+
+.mainLinks {
+  display: flex;
+  justify-content: flex-start;
+  gap: 11.9rem;
+  margin-bottom: 2rem;
+  font-family: "Avenir-Heavy";
+}
+
+.mainLink {
+  color: #3081E2;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mainLink:hover {
+  color: #2563eb;
+}
+
+.footerColumns {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footerColumn {
+  width: 160px; 
+}
+
+.columnTitle, .contactTitle {
+  color: #3081E2;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Avenir-Heavy";
+  margin-bottom: 1rem;
+}
+
+.footerLink {
+  display: block;
+  color: #868E91;
+  font-family: "Avenir-Roman";
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footerLink:hover {
+  color: #2563eb;
+}
+
+.contactTitle {
+  color: #3081E2;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.contactInfo {
+  color: #868E91;
+  font-family: "Avenir-Roman";
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footerImages {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.footerImageLink {
+  margin: 0 0.5rem;
+}
+
+.footerImage {
+  width: 100px; 
+  height: auto;
+}
+
+.copyright {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.footerColumns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerColumn:first-child {
+  margin-right: 2rem; 
+}
+
+.footerColumn:nth-child(2) {
+  margin-right: 5rem; 
+}
+
+
+
+
+
+
+
+

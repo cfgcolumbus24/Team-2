@@ -77,13 +77,37 @@ export default function Clinical({ initialPatients }) {
 
   const handleQuery = async (question) => {
     try {
-      setQueryResponse(
-        "You have had a patient with a similar condition. Please refer to the John Doe patient's profile for more information."
+      const response = await fetch(
+        'http://ec2-3-91-148-179.compute-1.amazonaws.com:3000/api/openai',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            type: 'patient',
+            "prompt": question
+          }),
+        }
       );
+      
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      // Format the response to place each numbered item on a new line
+    const formattedResponse = data.response.replace(/(\d+\.)/g, '\n$1');
+      setQueryResponse(formattedResponse || "No relevant data found.");
     } catch (error) {
-      console.error('Failed to fetch query response:', error);
+      console.error("Failed to fetch query response:", error);
+      setQueryResponse("Error retrieving response. Please try again.");
     }
   };
+  
+  
+  
+
 
   // Pagination calculation
   const indexOfLastPatient = currentPage * patientsPerPage;
