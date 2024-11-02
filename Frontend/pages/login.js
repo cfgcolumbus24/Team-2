@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const LoginButton = ({ role, onClick }) => {
   return (
@@ -9,6 +10,7 @@ const LoginButton = ({ role, onClick }) => {
 };
 
 const LoginAuthentication = () => {
+  const router = useRouter(); // Get the router instance
   const roles = ['Login'];
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -16,7 +18,7 @@ const LoginAuthentication = () => {
 
   const handleLogin = () => {
     if (username === 'jeffdoe@gmail.com' && password === 'password123') {
-      setNotification('Login Successful');
+      router.push('/mainDashboard'); // Navigate to mainDashboard
     } else {
       setNotification('Incorrect Email or Password');
     }
