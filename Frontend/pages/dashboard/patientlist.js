@@ -19,7 +19,7 @@ const PatientList = () => {
         // first 5 patients
         setPatients(updatedPatients.slice(0, 5));
         
-        // setPatients(updatedPatients);
+      // setPatients(updatedPatients);
       } catch (error) {
         console.error('Failed to fetch patients:', error);
         setPatients([]);

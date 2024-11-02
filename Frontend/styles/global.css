@@ -671,3 +671,79 @@ h1 {
 }
 
 
+.profileContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profileImage {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 70px; /* Adjust to align below profile image */
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profileContainer:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown p, .dropdownLink, .logoutButton {
+  margin: 8px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown p {
+  color: #666;
+}
+
+.dropdownLink {
+  display: block;
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+  padding: 6px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownLink:hover {
+  background-color: rgba(0, 112, 243, 0.1);
+}
+
+.logoutButton {
+  background-color: #ff5f5f;
+  color: white;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #ff4040;
+}

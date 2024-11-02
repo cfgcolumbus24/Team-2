@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { Line } from 'react-chartjs-2';
 import Header from './dashboard/header';
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
+
 
 import {
   Chart as ChartJS,
@@ -129,6 +132,55 @@ export default function Clinical({ initialPatients }) {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
+  const generatePDF = () => {
+    const doc = new jsPDF();
+
+    doc.setFontSize(18);
+    doc.text('Our Impact', 14, 20);
+    doc.setFontSize(12);
+    doc.text('Demographics', 14, 30);
+
+    // Demographics Table
+    doc.autoTable({
+      startY: 40,
+      head: [['Age', 'Number of individuals served']],
+      body: [
+        ['<18', '100'],
+        ['18-24', '750'],
+        ['25-34', '1100'],
+        ['35-44', '500'],
+        ['45-54', '250'],
+        ['55-64', '500'],
+        ['65+', '300'],
+        ['Unknown', '50'],
+      ],
+    });
+
+    // Additional info
+    doc.setFontSize(16);
+    doc.text('8/10 refer themselves or are brought in by a relative or friend.', 14, doc.autoTable.previous.finalY + 20);
+    doc.text('52% identify as male.', 14, doc.autoTable.previous.finalY + 30);
+
+    // Pie Chart Placeholder (you can generate and add it as an image if needed)
+    doc.setFontSize(14);
+    doc.text('Ethnicity Breakdown', 14, doc.autoTable.previous.finalY + 50);
+
+    doc.autoTable({
+      startY: doc.autoTable.previous.finalY + 60,
+      head: [['Ethnicity', 'Percentage']],
+      body: [
+        ['Black/African-American', '43%'],
+        ['White/Caucasian', '45%'],
+        ['Hispanic/Latin American', '5%'],
+        ['Two or more races', '4%'],
+        ['Asian', '1%'],
+        ['Other', '2%'],
+      ],
+    });
+
+    doc.save('Impact_Report.pdf');
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Header />
@@ -145,6 +197,9 @@ export default function Clinical({ initialPatients }) {
           <p className="lastUpdated">
             Last Updated: {lastUpdated.toLocaleString()}
           </p>
+          <button onClick={generatePDF} className="reportButton">
+              Generate Report
+            </button>
         </div>
 
         <div className="patientsSection">

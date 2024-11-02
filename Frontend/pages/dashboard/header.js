@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from './Dashboard.module.css';
 
 const Header = () => {
   const router = useRouter(); // Access the current route
+  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown visibility
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen); // Toggle dropdown visibility
+  };
 
   return (
     <header className={styles.header}>
@@ -24,17 +29,27 @@ const Header = () => {
           Financial
         </Link>
       </nav>
-      <a 
-        href="https://media.istockphoto.com/id/1311511363/photo/headshot-portrait-of-smiling-male-doctor-with-tablet.jpg?s=612x612&w=0&k=20&c=w5TecWtlA_ZHRpfGh20II-nq5AvnhpFu6BfOfMHuLMA=" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
+      <div className={styles.profileContainer}>
         <img 
           src="https://media.istockphoto.com/id/1311511363/photo/headshot-portrait-of-smiling-male-doctor-with-tablet.jpg?s=612x612&w=0&k=20&c=w5TecWtlA_ZHRpfGh20II-nq5AvnhpFu6BfOfMHuLMA=" 
           className={styles.profileImage} 
           alt="Profile"
+          onClick={toggleDropdown} // Toggle dropdown on click
         />
-      </a>
+        {dropdownOpen && (
+          <div className={styles.dropdown}>
+            <p><strong>Name:</strong> Dr. John Doe</p>
+            <p><strong>Role:</strong> Clinician</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <Link href="/profile" className={styles.dropdownLink}>
+              View Profile
+            </Link>
+            <button onClick={() => alert('Logging out...')} className={styles.logoutButton}>
+              Log Out
+            </button>
+          </div>
+        )}
+      </div>
     </header>
   );
 };
