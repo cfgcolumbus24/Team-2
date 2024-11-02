@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const LoginButton = ({ role }) => {
   return (
@@ -9,7 +9,14 @@ const LoginButton = ({ role }) => {
 };
 
 const LoginAuthentication = () => {
-  const roles = ['Super Admin', 'Director', 'Clinician'];
+  const roles = ['Login'];
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    console.log("Logging in with:", { username, password });
+    // Add actual login handling here
+  };
 
   return (
     <main className="loginAuthentication">
@@ -23,10 +30,29 @@ const LoginAuthentication = () => {
             />
           </div>
         </header>
-        <h2 className="loginTitle">Logging in as:</h2>
+        <h2 className="loginTitle">Log In:</h2>
+        
+        {/* Username Textbox */}
+        <input
+          type="text"
+          placeholder="Email"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="queryInput"
+        />
+        
+        {/* Password Textbox */}
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="queryInput"
+        />
+        
         <nav>
           {roles.map((role, index) => (
-            <LoginButton key={index} role={role} />
+            <LoginButton key={index} role={role} onClick={handleLogin} />
           ))}
         </nav>
       </section>
