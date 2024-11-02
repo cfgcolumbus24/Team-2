@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "chart.js": "^4.4.6",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.8.4",
     "next": "latest",
