@@ -1,65 +1,103 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
 }
 
-.title a {
-  color: #0070f3;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoNumber {
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navItem {
+  padding: 10px 15px;
   text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.navItem:hover {
+  background-color: #0070f3;
+  color: white;
 }
 
-.title {
-  margin: 0 0 1rem;
-  line-height: 1.15;
-  font-size: 3.6rem;
+.active {
+  background-color: #0070f3;
+  color: white;
 }
 
-.title {
+.loginButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #005bb5;
+}
+
+.main {
   text-align: center;
+  margin-top: 40px;
 }
 
-.title,
-.description {
-  text-align: center;
+.welcomeText {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.professionals {
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  gap: 20px; /* Adds space between cards */
   max-width: 800px;
-  margin-top: 3rem;
+  margin: 3rem auto; /* Centers the grid on the page */
 }
 
 .card {
-  margin: 1rem;
-  flex-basis: 45%;
+  flex-basis: 45%; /* Sets the width of each card */
+  max-width: 350px; /* Ensures cards don’t grow too wide */
   padding: 1.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition:
-    color 0.15s ease,
-    border-color 0.15s ease;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  margin: 1rem; /* Adds space around each card */
 }
 
 .card:hover,
@@ -70,23 +108,7 @@
 }
 
 .card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 10px;
 }
