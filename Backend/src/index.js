@@ -2,6 +2,8 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
+const axios = require('axios');
+const OpenAI = require('openai');
 const app = express();
 const port = process.env.PORT || 3000; // Use port from env or default to 3000
 
@@ -94,8 +96,54 @@ app.get('/data/financial/expenses', (req, res) => {
 app.get('/health', (req, res) => {
     res.json({ status: 'OK' });
 });
+app.get('/api/openai', async (req, res) => {
+    const type = req.query.type; // 'financial' or 'patient'
+    const prompt = req.query.prompt;
+    let results = []; // Initialize an empty array to store CSV data
+    let filePath;
+
+    // Determine which CSV file to read based on the 'type' query parameter
+    if (type === 'financial') {
+        filePath = 'src/netcare_financial_data.csv';
+    } else if (type === 'patient') {
+        filePath = 'src/dummy_patient_data.csv';
+    } else {
+        return res.status(400).send("Invalid type parameter. Choose either 'financial' or 'patient'.");
+    }
+
+    // Function to read CSV data and return it as a JSON string
+    const readCSVData = () => {
+        return new Promise((resolve, reject) => {
+            fs.createReadStream(filePath)
+                .pipe(csv())
+                .on('data', (data) => results.push(data))
+                .on('end', () => resolve(JSON.stringify(results)))
+                .on('error', (error) => reject(error));
+        });
+    };
+
+    try {
+        // Wait for CSV data to be fully read
+        const data = await readCSVData();
+
+        // Set up the request to OpenAI's API
+        // const openai = new OpenAI();
+        const client = new OpenAI({
+            apiKey: process.env.OPENAI_API_KEY});
+        const chatCompletion = await client.chat.completions.create({
+            messages: [{ role: 'user', content: data  + prompt }],
+            model: 'gpt-4o',
+          });
 
 
+
+        // Send the OpenAI response back to the client
+        res.json({ "response": chatCompletion.choices[0].message.content });
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).send("Error calling OpenAI API or reading CSV data");
+    }
+});
 // Log whether we're in EC2 or local
 if (isEC2) {
     console.log("Running on an EC2 instance");
