@@ -98,18 +98,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
-  .statLabel {
-    font-size: 0.75rem; /* Keep this the same */
-    color: #726c6c;
-  }
-  
-  .statValue {
-    font-size: 0.85rem; /* Increased from 0.75rem to 0.85rem */
-    font-weight: 500;
-    color: #003049;
-  }  
-  
+
   .sidebarNav {
     margin-top: 1.5rem;
   }
@@ -320,7 +309,17 @@
   }
   
   .statValue {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #001fb5;
+    line-height: 1;
+    margin-top: 10px; /* Add space above the value */
+    display: block; /* Ensures value is treated as a block */
+    margin-bottom: 0.5rem;
+  }
+
+  .statValueSB {
+    font-size: 0.75rem;
     font-weight: 600;
     color: #001fb5;
     line-height: 1;

@@ -40,15 +40,15 @@ const Sidebar = () => {
           <div className={styles.userStats} style={{ display: 'flex', justifyContent: 'space-around', width: '100%' }}>
             <div className={styles.statItem}>
               <span className={styles.statLabel}>Blood</span>
-              <span className={styles.statValue}>o+</span>
+              <span className={styles.statValueSB}>o+</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statLabel}>Height</span>
-              <span className={styles.statValue}>176cm</span>
+              <span className={styles.statValueSB}>176cm</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statLabel}>Weight</span>
-              <span className={styles.statValue}>86kg</span>
+              <span className={styles.statValueSB}>86kg</span>
             </div>
           </div>
         </div>

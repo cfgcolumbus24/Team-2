@@ -12,8 +12,9 @@ const mainDashboard = () => {
       <Header />
       <h2 className={styles.welcomeMessage}>Welcome Dr. Doe!</h2>
       <div style={{ display: 'flex', flexGrow: 1, padding: '20px',  }}>
-        <div style={{ flex: '1', marginRight: '20px', gap: '20px', }}> {/* Sidebar and MainContent container */}
+        <div style={{ flex: '1', marginRight: '20px'}}> {/* Sidebar and MainContent container */}
           <Sidebar />
+          <section></section>
           <MainContent />
         </div>
       </div>
