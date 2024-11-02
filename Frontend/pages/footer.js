@@ -9,16 +9,16 @@ export default function Footer() {
       <div className={styles.footerTop}>
         <Image src={logo} alt="Company Logo" className={styles.footerLogo} />
 
-        <div className={styles.topLinks}>
+        <div className={styles.topButtons}>
           <button className={styles.footerButton1}>Find Help</button>
           <button className={styles.footerButton2}>Donate</button>
         </div>
       </div>
 
       <div className={styles.mainLinks}>
-        <a href="#services" className={styles.footerLink}>Services</a>
-        <a href="#careers" className={styles.footerLink}>Careers</a>
-        <a href="#about" className={styles.footerLink}>About Us</a>
+        <a href="#services" className={styles.mainLink}>Services</a>
+        <a href="#careers" className={styles.mainLink}>Careers</a>
+        <a href="#about" className={styles.mainLink}>About Us</a>
       </div>
 
       <div className={styles.footerColumns}>
@@ -39,9 +39,9 @@ export default function Footer() {
 
         <div className={styles.footerColumn}>
           <h3 className={styles.columnTitle}>Contact</h3>
-          <p className={styles.footerContactInfo}>199 South Central Avenue<br />Columbus, Ohio 43223</p>
-          <p className={styles.footerContactInfo}>614-276-CARE (2273)</p>
-          <p className={styles.footerContactInfo}>988</p>
+          <p className={styles.contactInfo}>199 South Central Avenue<br />Columbus, Ohio 43223</p>
+          <p className={styles.contactInfo}>614-276-CARE (2273)</p>
+          <p className={styles.contactInfo}>988</p>
         </div>
       </div>
 
@@ -65,9 +65,13 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </footer>   
+    </footer>
   );
 }
+
+
+
+
 
 
 
