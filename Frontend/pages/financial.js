@@ -235,59 +235,66 @@ const expenseData2022 = {
 
   return (
     <div className={styles.container}>
+      {/* Financial Impact Section */}
       <div className={styles.statsSection}>
         <div className={styles.statsHeader}>
-          <h2>Our Stats</h2>
-          <p>We help you to unleash the power within your business</p>
+          <h2>Our Financial Impact</h2>
+          <p>We are committed to transparency, ensuring that our funding is directed towards meaningful support and recovery services for the community.</p>
         </div>
+  
+        {/* Generate Report Button */}
         <button onClick={generateReport} className={styles.generateReportButton}>
           Generate Report
         </button>
+  
+        {/* Financial Stats */}
         <div className={styles.statsContainer}>
           <div className={styles.statItem}>
-            <div className={styles.statNumber}>260+</div>
-            <span className={styles.statLabel}>Expert Consultants</span>
+            <div className={styles.statNumber}>$12.3M</div>
+            <span className={styles.statLabel}>Total Revenue</span>
           </div>
           <div className={styles.statItem}>
-            <div className={styles.statNumber}>975+</div>
-            <span className={styles.statLabel}>Active Clients</span>
+            <div className={styles.statNumber}>$18.1M</div>
+            <span className={styles.statLabel}>Total Expenses</span>
           </div>
           <div className={styles.statItem}>
-            <div className={styles.statNumber}>724+</div>
-            <span className={styles.statLabel}>Projects Delivered</span>
-          </div>
-          <div className={styles.statItem}>
-            <div className={styles.statNumber}>89+</div>
-            <span className={styles.statLabel}>Orders in Queue</span>
+            <div className={styles.statNumber}>$4.4M</div>
+            <span className={styles.statLabel}>Net Assets</span>
           </div>
         </div>
+        {/* Learn More Button */}
+        <a href="https://www.netcareaccess.org/" target="_blank" rel="noopener noreferrer">
+            <button className={styles.learnMoreButton}>
+                Learn More
+            </button>
+        </a>
       </div>
-
+  
       {/* Graphs Section */}
       <section className={styles.graphsSection}>
         <div className={styles.chartWrapper}>
-            <h2 className={styles.chartTitle}>Revenue Comparison by Year</h2>
-            <div ref={revenueChartRef} className={styles.chartContainer}>
+          <h2 className={styles.chartTitle}>Revenue Comparison by Year</h2>
+          <div ref={revenueChartRef} className={styles.chartContainer}>
             <Bar data={revenueData} options={barOptions} />
-            </div>
+          </div>
         </div>
-
+  
         <div className={styles.chartWrapper}>
-            <h2 className={styles.chartTitle}>2022 Expenses Distribution</h2>
-            <div ref={expenseChartRef} className={styles.chartContainer}>
+          <h2 className={styles.chartTitle}>2022 Expenses Distribution</h2>
+          <div ref={expenseChartRef} className={styles.chartContainer}>
             <Pie data={expenseData2022} options={expenseOptions} />
-            </div>
+          </div>
         </div>
-
+  
         <div className={styles.chartWrapper}>
-            <h2 className={styles.chartTitle}>Assets Comparison by Year</h2>
-            <div ref={assetsChartRef} className={styles.chartContainer}>
+          <h2 className={styles.chartTitle}>Assets Comparison by Year</h2>
+          <div ref={assetsChartRef} className={styles.chartContainer}>
             <Bar data={assetsData} options={barOptions} />
-            </div>
+          </div>
         </div>
-        </section>
+      </section>
     </div>
-  );
+  );  
 }
 
 
