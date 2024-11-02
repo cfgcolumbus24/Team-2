@@ -15,14 +15,13 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={styles.footerColumns}>
-        <div className={styles.footerColumn}>
-          <h3 className={styles.columnTitle}>Services</h3>
-          <a href="#services" className={styles.footerLink}>Services</a>
-          <a href="#careers" className={styles.footerLink}>Careers</a>
-          <a href="#about" className={styles.footerLink}>About Us</a>
-        </div>
+      <div className={styles.mainLinks}>
+        <a href="#services" className={styles.footerLink}>Services</a>
+        <a href="#careers" className={styles.footerLink}>Careers</a>
+        <a href="#about" className={styles.footerLink}>About Us</a>
+      </div>
 
+      <div className={styles.footerColumns}>
         <div className={styles.footerColumn}>
           <h3 className={styles.columnTitle}>Crisis Help</h3>
           <a href="#referral" className={styles.footerLink}>How to Make a Referral</a>
@@ -47,25 +46,29 @@ export default function Footer() {
       </div>
 
       <div className={styles.footerBottom}>
-        <a href="#link1" className={styles.footerImageLink}>
-          <img src="/image1_ADAMH.png" alt="Link 1" className={styles.footerImage} />
-        </a>
-        <a href="#link2" className={styles.footerImageLink}>
-          <img src="/image2_CSB.png" alt="Link 2" className={styles.footerImage} />
-        </a>
-        <a href="#link3" className={styles.footerImageLink}>
-          <img src="/image3_HSC.png" alt="Link 3" className={styles.footerImage} />
-        </a>
-        <a href="#link4" className={styles.footerImageLink}>
-          <img src="/image4_CWC.png" alt="Link 4" className={styles.footerImage} />
-        </a>
-        <a href="#link5" className={styles.footerImageLink}>
-          <img src="/image5_rainbow.png" alt="Link 5" className={styles.footerImage} />
-        </a>
+        <p className={styles.copyright}>© 2024 Netcare Access</p>
+        <div className={styles.footerImages}>
+          <a href="#link1" className={styles.footerImageLink}>
+            <img src="/image1_ADAMH.png" alt="Link 1" className={styles.footerImage} />
+          </a>
+          <a href="#link2" className={styles.footerImageLink}>
+            <img src="/image2_CSB.png" alt="Link 2" className={styles.footerImage} />
+          </a>
+          <a href="#link3" className={styles.footerImageLink}>
+            <img src="/image3_HSC.png" alt="Link 3" className={styles.footerImage} />
+          </a>
+          <a href="#link4" className={styles.footerImageLink}>
+            <img src="/image4_CWC.png" alt="Link 4" className={styles.footerImage} />
+          </a>
+          <a href="#link5" className={styles.footerImageLink}>
+            <img src="/image5_rainbow.png" alt="Link 5" className={styles.footerImage} />
+          </a>
+        </div>
       </div>
-      <p className={styles.copyright}>© 2024 Netcare Access</p>
-    </footer>
+    </footer>   
   );
 }
+
+
 
 
