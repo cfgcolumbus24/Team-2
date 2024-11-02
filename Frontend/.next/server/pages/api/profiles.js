@@ -1,0 +1,76 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/api/profiles";
+exports.ids = ["pages/api/profiles"];
+exports.modules = {
+
+/***/ "next/dist/compiled/next-server/pages-api.runtime.dev.js":
+/*!**************************************************************************!*\
+  !*** external "next/dist/compiled/next-server/pages-api.runtime.dev.js" ***!
+  \**************************************************************************/
+/***/ ((module) => {
+
+module.exports = require("next/dist/compiled/next-server/pages-api.runtime.dev.js");
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/***/ ((module) => {
+
+module.exports = require("path");
+
+/***/ }),
+
+/***/ "(api)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fprofiles&preferredRegion=&absolutePagePath=.%2Fpages%2Fapi%2Fprofiles.js&middlewareConfigBase64=e30%3D!":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fprofiles&preferredRegion=&absolutePagePath=.%2Fpages%2Fapi%2Fprofiles.js&middlewareConfigBase64=e30%3D! ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   config: () => (/* binding */ config),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   routeModule: () => (/* binding */ routeModule)\n/* harmony export */ });\n/* harmony import */ var next_dist_server_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/server/route-modules/pages-api/module.compiled */ \"(api)/./node_modules/next/dist/server/route-modules/pages-api/module.compiled.js\");\n/* harmony import */ var next_dist_server_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_dist_server_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dist/server/route-kind */ \"(api)/./node_modules/next/dist/server/route-kind.js\");\n/* harmony import */ var next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dist/build/templates/helpers */ \"(api)/./node_modules/next/dist/build/templates/helpers.js\");\n/* harmony import */ var _pages_api_profiles_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/api/profiles.js */ \"(api)/./pages/api/profiles.js\");\n\n\n\n// Import the userland code.\n\n// Re-export the handler (should be the default export).\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_api_profiles_js__WEBPACK_IMPORTED_MODULE_3__, 'default'));\n// Re-export config.\nconst config = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_api_profiles_js__WEBPACK_IMPORTED_MODULE_3__, 'config');\n// Create and export the route module that will be consumed.\nconst routeModule = new next_dist_server_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__.PagesAPIRouteModule({\n    definition: {\n        kind: next_dist_server_route_kind__WEBPACK_IMPORTED_MODULE_1__.RouteKind.PAGES_API,\n        page: \"/api/profiles\",\n        pathname: \"/api/profiles\",\n        // The following aren't used in production.\n        bundlePath: '',\n        filename: ''\n    },\n    userland: _pages_api_profiles_js__WEBPACK_IMPORTED_MODULE_3__\n});\n\n//# sourceMappingURL=pages-api.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LXJvdXRlLWxvYWRlci9pbmRleC5qcz9raW5kPVBBR0VTX0FQSSZwYWdlPSUyRmFwaSUyRnByb2ZpbGVzJnByZWZlcnJlZFJlZ2lvbj0mYWJzb2x1dGVQYWdlUGF0aD0uJTJGcGFnZXMlMkZhcGklMkZwcm9maWxlcy5qcyZtaWRkbGV3YXJlQ29uZmlnQmFzZTY0PWUzMCUzRCEiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBK0Y7QUFDdkM7QUFDRTtBQUMxRDtBQUNvRDtBQUNwRDtBQUNBLGlFQUFlLHdFQUFLLENBQUMsbURBQVEsWUFBWSxFQUFDO0FBQzFDO0FBQ08sZUFBZSx3RUFBSyxDQUFDLG1EQUFRO0FBQ3BDO0FBQ08sd0JBQXdCLHlHQUFtQjtBQUNsRDtBQUNBLGNBQWMsa0VBQVM7QUFDdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTCxZQUFZO0FBQ1osQ0FBQzs7QUFFRCIsInNvdXJjZXMiOlsid2VicGFjazovLy8/MWQ1YyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBQYWdlc0FQSVJvdXRlTW9kdWxlIH0gZnJvbSBcIm5leHQvZGlzdC9zZXJ2ZXIvcm91dGUtbW9kdWxlcy9wYWdlcy1hcGkvbW9kdWxlLmNvbXBpbGVkXCI7XG5pbXBvcnQgeyBSb3V0ZUtpbmQgfSBmcm9tIFwibmV4dC9kaXN0L3NlcnZlci9yb3V0ZS1raW5kXCI7XG5pbXBvcnQgeyBob2lzdCB9IGZyb20gXCJuZXh0L2Rpc3QvYnVpbGQvdGVtcGxhdGVzL2hlbHBlcnNcIjtcbi8vIEltcG9ydCB0aGUgdXNlcmxhbmQgY29kZS5cbmltcG9ydCAqIGFzIHVzZXJsYW5kIGZyb20gXCIuL3BhZ2VzL2FwaS9wcm9maWxlcy5qc1wiO1xuLy8gUmUtZXhwb3J0IHRoZSBoYW5kbGVyIChzaG91bGQgYmUgdGhlIGRlZmF1bHQgZXhwb3J0KS5cbmV4cG9ydCBkZWZhdWx0IGhvaXN0KHVzZXJsYW5kLCAnZGVmYXVsdCcpO1xuLy8gUmUtZXhwb3J0IGNvbmZpZy5cbmV4cG9ydCBjb25zdCBjb25maWcgPSBob2lzdCh1c2VybGFuZCwgJ2NvbmZpZycpO1xuLy8gQ3JlYXRlIGFuZCBleHBvcnQgdGhlIHJvdXRlIG1vZHVsZSB0aGF0IHdpbGwgYmUgY29uc3VtZWQuXG5leHBvcnQgY29uc3Qgcm91dGVNb2R1bGUgPSBuZXcgUGFnZXNBUElSb3V0ZU1vZHVsZSh7XG4gICAgZGVmaW5pdGlvbjoge1xuICAgICAgICBraW5kOiBSb3V0ZUtpbmQuUEFHRVNfQVBJLFxuICAgICAgICBwYWdlOiBcIi9hcGkvcHJvZmlsZXNcIixcbiAgICAgICAgcGF0aG5hbWU6IFwiL2FwaS9wcm9maWxlc1wiLFxuICAgICAgICAvLyBUaGUgZm9sbG93aW5nIGFyZW4ndCB1c2VkIGluIHByb2R1Y3Rpb24uXG4gICAgICAgIGJ1bmRsZVBhdGg6ICcnLFxuICAgICAgICBmaWxlbmFtZTogJydcbiAgICB9LFxuICAgIHVzZXJsYW5kXG59KTtcblxuLy8jIHNvdXJjZU1hcHBpbmdVUkw9cGFnZXMtYXBpLmpzLm1hcCJdLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fprofiles&preferredRegion=&absolutePagePath=.%2Fpages%2Fapi%2Fprofiles.js&middlewareConfigBase64=e30%3D!\n");
+
+/***/ }),
+
+/***/ "(api)/./pages/api/profiles.js":
+/*!*******************************!*\
+  !*** ./pages/api/profiles.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fs */ \"fs\");\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! path */ \"path\");\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction handler(req, res) {\n    const { type, id } = req.query;\n    const filePath = path__WEBPACK_IMPORTED_MODULE_1___default().join(process.cwd(), 'profiles.json');\n    fs__WEBPACK_IMPORTED_MODULE_0___default().readFile(filePath, 'utf-8', (err, data)=>{\n        if (err) {\n            return res.status(500).json({\n                error: 'Error reading profiles.json'\n            });\n        }\n        const profiles = JSON.parse(data);\n        // Handle different types of data requests for user profiles\n        switch(type){\n            case 'allProfiles':\n                res.status(200).json(profiles);\n                break;\n            case 'profile':\n                if (id) {\n                    const profile = profiles.find((p)=>p.id === parseInt(id));\n                    if (profile) {\n                        res.status(200).json(profile);\n                    } else {\n                        res.status(404).json({\n                            error: 'Profile not found'\n                        });\n                    }\n                } else {\n                    res.status(400).json({\n                        error: 'ID is required for profile lookup'\n                    });\n                }\n                break;\n            case 'conditions':\n                const conditions = profiles.flatMap((profile)=>profile.conditions);\n                res.status(200).json(conditions);\n                break;\n            case 'notes':\n                const notes = profiles.flatMap((profile)=>profile.notes);\n                res.status(200).json(notes);\n                break;\n            case 'tasks':\n                const tasks = profiles.flatMap((profile)=>profile.tasks);\n                res.status(200).json(tasks);\n                break;\n            default:\n                // Return all profiles if 'type' is not specified or invalid\n                res.status(200).json(profiles);\n        }\n    });\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvcHJvZmlsZXMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBb0I7QUFDSTtBQUVULFNBQVNFLFFBQVFDLEdBQUcsRUFBRUMsR0FBRztJQUN0QyxNQUFNLEVBQUVDLElBQUksRUFBRUMsRUFBRSxFQUFFLEdBQUdILElBQUlJLEtBQUs7SUFDOUIsTUFBTUMsV0FBV1AsZ0RBQVMsQ0FBQ1MsUUFBUUMsR0FBRyxJQUFJO0lBRTFDWCxrREFBVyxDQUFDUSxVQUFVLFNBQVMsQ0FBQ0ssS0FBS0M7UUFDbkMsSUFBSUQsS0FBSztZQUNQLE9BQU9ULElBQUlXLE1BQU0sQ0FBQyxLQUFLQyxJQUFJLENBQUM7Z0JBQUVDLE9BQU87WUFBOEI7UUFDckU7UUFFQSxNQUFNQyxXQUFXQyxLQUFLQyxLQUFLLENBQUNOO1FBRTVCLDREQUE0RDtRQUM1RCxPQUFRVDtZQUNOLEtBQUs7Z0JBQ0hELElBQUlXLE1BQU0sQ0FBQyxLQUFLQyxJQUFJLENBQUNFO2dCQUNyQjtZQUNGLEtBQUs7Z0JBQ0gsSUFBSVosSUFBSTtvQkFDTixNQUFNZSxVQUFVSCxTQUFTSSxJQUFJLENBQUMsQ0FBQ0MsSUFBTUEsRUFBRWpCLEVBQUUsS0FBS2tCLFNBQVNsQjtvQkFDdkQsSUFBSWUsU0FBUzt3QkFDWGpCLElBQUlXLE1BQU0sQ0FBQyxLQUFLQyxJQUFJLENBQUNLO29CQUN2QixPQUFPO3dCQUNMakIsSUFBSVcsTUFBTSxDQUFDLEtBQUtDLElBQUksQ0FBQzs0QkFBRUMsT0FBTzt3QkFBb0I7b0JBQ3BEO2dCQUNGLE9BQU87b0JBQ0xiLElBQUlXLE1BQU0sQ0FBQyxLQUFLQyxJQUFJLENBQUM7d0JBQUVDLE9BQU87b0JBQW9DO2dCQUNwRTtnQkFDQTtZQUNGLEtBQUs7Z0JBQ0gsTUFBTVEsYUFBYVAsU0FBU1EsT0FBTyxDQUFDLENBQUNMLFVBQVlBLFFBQVFJLFVBQVU7Z0JBQ25FckIsSUFBSVcsTUFBTSxDQUFDLEtBQUtDLElBQUksQ0FBQ1M7Z0JBQ3JCO1lBQ0YsS0FBSztnQkFDSCxNQUFNRSxRQUFRVCxTQUFTUSxPQUFPLENBQUMsQ0FBQ0wsVUFBWUEsUUFBUU0sS0FBSztnQkFDekR2QixJQUFJVyxNQUFNLENBQUMsS0FBS0MsSUFBSSxDQUFDVztnQkFDckI7WUFDRixLQUFLO2dCQUNILE1BQU1DLFFBQVFWLFNBQVNRLE9BQU8sQ0FBQyxDQUFDTCxVQUFZQSxRQUFRTyxLQUFLO2dCQUN6RHhCLElBQUlXLE1BQU0sQ0FBQyxLQUFLQyxJQUFJLENBQUNZO2dCQUNyQjtZQUNGO2dCQUNFLDREQUE0RDtnQkFDNUR4QixJQUFJVyxNQUFNLENBQUMsS0FBS0MsSUFBSSxDQUFDRTtRQUN6QjtJQUNGO0FBQ0YiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWdlcy9hcGkvcHJvZmlsZXMuanM/Mzk5YiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZnMgZnJvbSAnZnMnO1xuaW1wb3J0IHBhdGggZnJvbSAncGF0aCc7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGhhbmRsZXIocmVxLCByZXMpIHtcbiAgY29uc3QgeyB0eXBlLCBpZCB9ID0gcmVxLnF1ZXJ5O1xuICBjb25zdCBmaWxlUGF0aCA9IHBhdGguam9pbihwcm9jZXNzLmN3ZCgpLCAncHJvZmlsZXMuanNvbicpO1xuXG4gIGZzLnJlYWRGaWxlKGZpbGVQYXRoLCAndXRmLTgnLCAoZXJyLCBkYXRhKSA9PiB7XG4gICAgaWYgKGVycikge1xuICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5qc29uKHsgZXJyb3I6ICdFcnJvciByZWFkaW5nIHByb2ZpbGVzLmpzb24nIH0pO1xuICAgIH1cblxuICAgIGNvbnN0IHByb2ZpbGVzID0gSlNPTi5wYXJzZShkYXRhKTtcblxuICAgIC8vIEhhbmRsZSBkaWZmZXJlbnQgdHlwZXMgb2YgZGF0YSByZXF1ZXN0cyBmb3IgdXNlciBwcm9maWxlc1xuICAgIHN3aXRjaCAodHlwZSkge1xuICAgICAgY2FzZSAnYWxsUHJvZmlsZXMnOlxuICAgICAgICByZXMuc3RhdHVzKDIwMCkuanNvbihwcm9maWxlcyk7XG4gICAgICAgIGJyZWFrO1xuICAgICAgY2FzZSAncHJvZmlsZSc6XG4gICAgICAgIGlmIChpZCkge1xuICAgICAgICAgIGNvbnN0IHByb2ZpbGUgPSBwcm9maWxlcy5maW5kKChwKSA9PiBwLmlkID09PSBwYXJzZUludChpZCkpO1xuICAgICAgICAgIGlmIChwcm9maWxlKSB7XG4gICAgICAgICAgICByZXMuc3RhdHVzKDIwMCkuanNvbihwcm9maWxlKTtcbiAgICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgcmVzLnN0YXR1cyg0MDQpLmpzb24oeyBlcnJvcjogJ1Byb2ZpbGUgbm90IGZvdW5kJyB9KTtcbiAgICAgICAgICB9XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgcmVzLnN0YXR1cyg0MDApLmpzb24oeyBlcnJvcjogJ0lEIGlzIHJlcXVpcmVkIGZvciBwcm9maWxlIGxvb2t1cCcgfSk7XG4gICAgICAgIH1cbiAgICAgICAgYnJlYWs7XG4gICAgICBjYXNlICdjb25kaXRpb25zJzpcbiAgICAgICAgY29uc3QgY29uZGl0aW9ucyA9IHByb2ZpbGVzLmZsYXRNYXAoKHByb2ZpbGUpID0+IHByb2ZpbGUuY29uZGl0aW9ucyk7XG4gICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKGNvbmRpdGlvbnMpO1xuICAgICAgICBicmVhaztcbiAgICAgIGNhc2UgJ25vdGVzJzpcbiAgICAgICAgY29uc3Qgbm90ZXMgPSBwcm9maWxlcy5mbGF0TWFwKChwcm9maWxlKSA9PiBwcm9maWxlLm5vdGVzKTtcbiAgICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24obm90ZXMpO1xuICAgICAgICBicmVhaztcbiAgICAgIGNhc2UgJ3Rhc2tzJzpcbiAgICAgICAgY29uc3QgdGFza3MgPSBwcm9maWxlcy5mbGF0TWFwKChwcm9maWxlKSA9PiBwcm9maWxlLnRhc2tzKTtcbiAgICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24odGFza3MpO1xuICAgICAgICBicmVhaztcbiAgICAgIGRlZmF1bHQ6XG4gICAgICAgIC8vIFJldHVybiBhbGwgcHJvZmlsZXMgaWYgJ3R5cGUnIGlzIG5vdCBzcGVjaWZpZWQgb3IgaW52YWxpZFxuICAgICAgICByZXMuc3RhdHVzKDIwMCkuanNvbihwcm9maWxlcyk7XG4gICAgfVxuICB9KTtcbn0iXSwibmFtZXMiOlsiZnMiLCJwYXRoIiwiaGFuZGxlciIsInJlcSIsInJlcyIsInR5cGUiLCJpZCIsInF1ZXJ5IiwiZmlsZVBhdGgiLCJqb2luIiwicHJvY2VzcyIsImN3ZCIsInJlYWRGaWxlIiwiZXJyIiwiZGF0YSIsInN0YXR1cyIsImpzb24iLCJlcnJvciIsInByb2ZpbGVzIiwiSlNPTiIsInBhcnNlIiwicHJvZmlsZSIsImZpbmQiLCJwIiwicGFyc2VJbnQiLCJjb25kaXRpb25zIiwiZmxhdE1hcCIsIm5vdGVzIiwidGFza3MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/profiles.js\n");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../../webpack-api-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next"], () => (__webpack_exec__("(api)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fprofiles&preferredRegion=&absolutePagePath=.%2Fpages%2Fapi%2Fprofiles.js&middlewareConfigBase64=e30%3D!")));
+module.exports = __webpack_exports__;
+
+})();
