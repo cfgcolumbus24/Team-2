@@ -235,48 +235,57 @@ const expenseData2022 = {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.header}>Financial Dashboard</h1>
-
-      <div className={styles.summaryContainer}>
-        <div>
-          <h3>Total Revenue (2022)</h3>
-          <p className={styles.revenueText}>${data[8]?.['2022']}</p>
+      <div className={styles.statsSection}>
+        <div className={styles.statsHeader}>
+          <h2>Our Stats</h2>
+          <p>We help you to unleash the power within your business</p>
         </div>
-        <div>
-          <h3>Total Expenses (2022)</h3>
-          <p className={styles.expensesText}>${data[4]?.['2022 Expenses']}</p>
+        <button onClick={generateReport} className={styles.generateReportButton}>
+          Generate Report
+        </button>
+        <div className={styles.statsContainer}>
+          <div className={styles.statItem}>
+            <div className={styles.statNumber}>260+</div>
+            <span className={styles.statLabel}>Expert Consultants</span>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statNumber}>975+</div>
+            <span className={styles.statLabel}>Active Clients</span>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statNumber}>724+</div>
+            <span className={styles.statLabel}>Projects Delivered</span>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statNumber}>89+</div>
+            <span className={styles.statLabel}>Orders in Queue</span>
+          </div>
         </div>
       </div>
 
-      {/* Revenue Chart */}
-      <section>
-        <h2 className={styles.chartSection}>Revenue Comparison by Year</h2>
-        <div ref={revenueChartRef} className={styles.chartContainer}>
-          <Bar data={revenueData} options={barOptions} />
+      {/* Graphs Section */}
+      <section className={styles.graphsSection}>
+        <div className={styles.chartWrapper}>
+            <h2 className={styles.chartTitle}>Revenue Comparison by Year</h2>
+            <div ref={revenueChartRef} className={styles.chartContainer}>
+            <Bar data={revenueData} options={barOptions} />
+            </div>
         </div>
-      </section>
 
-      {/* Expenses Chart */}
-      <section style={{ marginTop: '2rem' }}>
-        <h2 className={styles.chartSection}>2022 Expenses Distribution</h2>
-        <div ref={expenseChartRef} className={styles.chartContainer}>
+        <div className={styles.chartWrapper}>
+            <h2 className={styles.chartTitle}>2022 Expenses Distribution</h2>
+            <div ref={expenseChartRef} className={styles.chartContainer}>
             <Pie data={expenseData2022} options={expenseOptions} />
+            </div>
         </div>
-      </section>
 
-
-      {/* Assets Chart */}
-      <section style={{ marginTop: '2rem' }}>
-        <h2 className={styles.chartSection}>Assets Comparison by Year</h2>
-        <div ref={assetsChartRef} className={styles.chartContainer}>
-          <Bar data={assetsData} options={barOptions} />
+        <div className={styles.chartWrapper}>
+            <h2 className={styles.chartTitle}>Assets Comparison by Year</h2>
+            <div ref={assetsChartRef} className={styles.chartContainer}>
+            <Bar data={assetsData} options={barOptions} />
+            </div>
         </div>
-      </section>
-
-      {/* Generate Report Button */}
-      <button onClick={generateReport} className={styles.generateReportButton}>
-        Generate Report
-      </button>
+        </section>
     </div>
   );
 }
