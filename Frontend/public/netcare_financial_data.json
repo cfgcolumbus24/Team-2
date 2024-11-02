@@ -7,7 +7,11 @@
         "Expense Category": "Emergency Services",
         "2020 Expenses": "12601105",
         "2021 Expenses": "12582715",
-        "2022 Expenses": "12672521"
+        "2022 Expenses": "12672521",
+        "Assets": "Temporarily Restricted Net Assets",
+        "2020 Assets": "50000",
+        "2021 Assets": "50000",
+        "2022 Assets": "50000"
     },
     {
         "Revenue Source": "State of Ohio",
@@ -17,7 +21,11 @@
         "Expense Category": "Forensic and Family Psychology",
         "2020 Expenses": "1258945",
         "2021 Expenses": "1373002",
-        "2022 Expenses": "1363704"
+        "2022 Expenses": "1363704",
+        "Assets": "Net Assets - Beginning of Year",
+        "2020 Assets": "2820057",
+        "2021 Assets": "4122330",
+        "2022 Assets": "4373396"
     },
     {
         "Revenue Source": "Medicaid & Medicare",
@@ -27,7 +35,11 @@
         "Expense Category": "Residential/Treatment Services",
         "2020 Expenses": "1006754",
         "2021 Expenses": "1099387",
-        "2022 Expenses": "1088634"
+        "2022 Expenses": "1088634",
+        "Assets": "Net Assets - End of Year",
+        "2020 Assets": "4122330",
+        "2021 Assets": "4373396",
+        "2022 Assets": "4339048"
     },
     {
         "Revenue Source": "Federal Government",
@@ -37,7 +49,11 @@
         "Expense Category": "General & Administrative",
         "2020 Expenses": "2504913",
         "2021 Expenses": "2984173",
-        "2022 Expenses": "2960630"
+        "2022 Expenses": "2960630",
+        "Assets": "Change in Net Assets",
+        "2020 Assets": "1252273",
+        "2021 Assets": "251066",
+        "2022 Assets": "34348"
     },
     {
         "Revenue Source": "Community Shelter Board",
