@@ -96,13 +96,12 @@ app.get('/data/financial/expenses', (req, res) => {
 app.get('/health', (req, res) => {
     res.json({ status: 'OK' });
 });
-app.get('/api/openai', async (req, res) => {
-    const type = req.query.type; // 'financial' or 'patient'
-    const prompt = req.query.prompt;
+app.post('/api/openai', async (req, res) => {
+    const { type, prompt } = req.body; // Retrieve 'type' and 'prompt' from the request body
     let results = []; // Initialize an empty array to store CSV data
     let filePath;
 
-    // Determine which CSV file to read based on the 'type' query parameter
+    // Determine which CSV file to read based on the 'type' parameter
     if (type === 'financial') {
         filePath = 'src/netcare_financial_data.csv';
     } else if (type === 'patient') {
@@ -127,15 +126,13 @@ app.get('/api/openai', async (req, res) => {
         const data = await readCSVData();
 
         // Set up the request to OpenAI's API
-        // const openai = new OpenAI();
         const client = new OpenAI({
-            apiKey: process.env.OPENAI_API_KEY});
+            apiKey: process.env.OPENAI_API_KEY
+        });
         const chatCompletion = await client.chat.completions.create({
-            messages: [{ role: 'user', content: data  + prompt }],
+            messages: [{ role: 'user', content: data + prompt }],
             model: 'gpt-4o',
-          });
-
-
+        });
 
         // Send the OpenAI response back to the client
         res.json({ "response": chatCompletion.choices[0].message.content });
