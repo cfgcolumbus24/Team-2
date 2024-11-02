@@ -268,7 +268,7 @@ const expenseData2022 = {
   
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column'}}>
       <Header />
     <div className={styles.container}>
       {/* Financial Impact Section */}

@@ -1,6 +1,6 @@
 .container {
   padding: 20px;
-  background: linear-gradient(135deg, #daf1f4, #b7d8f1); 
+  background: #ffffff;
   position: relative;
   min-height: 100vh;
   overflow: hidden;
@@ -11,7 +11,7 @@
   content: '';
   position: absolute;
   border-radius: 50%;
-  background: rgba(173, 216, 230, 0.4);
+  background: rgba(235, 235, 235, 0.4);
   mix-blend-mode: multiply;
   z-index: -1;
 }
@@ -31,7 +31,7 @@
 }
 
 .statsSection {
-  background-color: #bee3f1;
+  background-color: #f9f9f9;
   border-radius: 16px;
   padding: 3rem;
   margin-bottom: 3rem; 
