@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const LoginButton = ({ role }) => {
+const LoginButton = ({ role, onClick }) => {
   return (
-    <button className="loginButton">
+    <button className="loginButton" onClick={onClick}>
       {role}
     </button>
   );
 };
 
 const LoginAuthentication = () => {
-  const roles = ['Super Admin', 'Director', 'Clinician'];
+  const roles = ['Login'];
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [notification, setNotification] = useState('');
+
+  const handleLogin = () => {
+    if (username === 'jeffdoe@gmail.com' && password === 'password123') {
+      setNotification('Login Successful');
+    } else {
+      setNotification('Incorrect Email or Password');
+    }
+  };
 
   return (
     <main className="loginAuthentication">
@@ -23,12 +34,34 @@ const LoginAuthentication = () => {
             />
           </div>
         </header>
-        <h2 className="loginTitle">Logging in as:</h2>
+        <h2 className="loginTitle">Log In:</h2>
+        
+        {/* Email Textbox */}
+        <input
+          type="text"
+          placeholder="Email"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="queryInput"
+        />
+        
+        {/* Password Textbox */}
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="queryInput"
+        />
+        
         <nav>
           {roles.map((role, index) => (
-            <LoginButton key={index} role={role} />
+            <LoginButton key={index} role={role} onClick={handleLogin} />
           ))}
         </nav>
+        
+        {/* Notification Message */}
+        {notification && <p className="notification">{notification}</p>}
       </section>
     </main>
   );

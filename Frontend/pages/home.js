@@ -1,23 +1,40 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleLoginClick = () => {
+    router.push('/user'); // This navigates to the user.js page
+  };
+
+  const handleNavigation = (path) => {
+    router.push(path); // Dynamic navigation to other pages
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.logo}>
-          {/* Net */}
           <span className={styles.logoNumber}>
             <Image src="/logo.png" alt="2" width={200} height={200} />
           </span>
-          {/* Connect */}
         </h1>
         <nav className={styles.nav}>
-          <a href="#" className={`${styles.navItem} ${styles.active}`}>Home</a>
-          <a href="#" className={styles.navItem}>About Us</a>
-          <a href="#" className={styles.navItem}>Mission Statement</a>
+          <a onClick={() => handleNavigation('/')} className={`${styles.navItem} ${styles.active}`}>
+            Home
+          </a>
+          <a onClick={() => handleNavigation('/aboutus')} className={styles.navItem}>
+            About Us
+          </a>
+          <a onClick={() => handleNavigation('/missionstatement')} className={styles.navItem}>
+            Mission Statement
+          </a>
         </nav>
-        <button className={styles.loginButton}>Login</button>
+        <button className={styles.loginButton} onClick={handleLoginClick}>
+          Login
+        </button>
       </header>
 
       <main className={styles.main}>
