@@ -238,7 +238,7 @@ const expenseData2022 = {
       {/* Financial Impact Section */}
       <div className={styles.statsSection}>
         <div className={styles.statsHeader}>
-          <h2>Our Financial Impact</h2>
+          <h2>Financial Overview</h2>
           <p>We are committed to transparency, ensuring that our funding is directed towards meaningful support and recovery services for the community.</p>
         </div>
   
