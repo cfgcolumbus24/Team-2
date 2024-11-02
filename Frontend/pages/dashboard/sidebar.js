@@ -3,26 +3,26 @@ import styles from './dashboard.module.css';
 
 const Sidebar = () => {
   return (
-    <section className={styles.mainContent}> 
-    <div className={styles.sidebarbox}>
-      <aside 
-        className={styles.sidebar} 
-        style={{ 
-          display: 'flex', 
-          flexDirection: 'column', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          height: '100%', 
-          textAlign: 'center' 
-        }}
-      >
-        <div className={styles.userProfile} style={{ marginBottom: '20px' }}>
-          <img 
-            src="" 
-            alt="Dr. Jeffery Doe" 
-            className={styles.profileImage} 
-            style={{ borderRadius: '50%', width: '100px', height: '100px', marginBottom: '10px' }}
-          />
+      <section className={styles.mainContent}> 
+        <div className={styles.sidebarbox}>
+          <aside 
+            className={styles.sidebar} 
+            style={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              height: '100%', 
+              textAlign: 'center' 
+            }}
+          >
+            <div className={styles.userProfile} style={{ marginBottom: '20px' }}>
+              <img 
+                src="" 
+                alt="Dr. Jeffery Doe" 
+                className={styles.profileImage} 
+                style={{ borderRadius: '50%', width: '100px', height: '100px', marginBottom: '10px' }}
+              />
           <h2 className={styles.userName}>Dr. Jeffery Doe</h2>
           <div className={styles.userInfo} style={{ marginBottom: '10px' }}>
             <span>25 years old</span>
