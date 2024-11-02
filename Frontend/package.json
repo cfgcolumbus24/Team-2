@@ -3,11 +3,13 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "chart.js": "^4.4.6",
     "chartjs-plugin-datalabels": "^2.2.0",
+    "firebase": "^11.0.1",
     "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.8.4",
     "next": "latest",

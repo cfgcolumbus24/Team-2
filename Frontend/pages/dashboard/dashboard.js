@@ -6,7 +6,7 @@ import MainContent from './maincontent';
 import Calendar from './calendar';
 import PatientList from './patientlist';
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
     <div className={styles.dashboard}>
       <Header />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from './Dashboard.module.css';
+import styles from './dashboard.module.css';
 
 const Header = () => {
   const router = useRouter(); // Access the current route

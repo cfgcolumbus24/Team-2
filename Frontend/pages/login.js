@@ -42,11 +42,8 @@ const ConnectionModal = ({ onClose }) => {
     <div className="modalOverlay">
       <div className="modalContent">
         <h2>Link Data Sources</h2>
-        <div style={{ marginBottom: '15px',  }}>
-          <span>Link EHR Data    </span>
-         
-              
-
+        <div style={{ marginBottom: '15px' }}>
+          <span>Link EHR Data</span>
           <button
             onClick={() => handleConnect('EHR')}
             className={`connectButton ${connections.EHR ? 'connected' : ''}`}
@@ -55,7 +52,7 @@ const ConnectionModal = ({ onClose }) => {
           </button>
         </div>
         <div style={{ marginBottom: '15px' }}>
-          <span>Link Financial Data      </span>
+          <span>Link Financial Data</span>
           <button
             onClick={() => handleConnect('Financial')}
             className={`connectButton ${connections.Financial ? 'connected' : ''}`}
@@ -64,7 +61,7 @@ const ConnectionModal = ({ onClose }) => {
           </button>
         </div>
         <div style={{ marginBottom: '15px' }}>
-          <span>Link Avatar Data       </span>
+          <span>Link Avatar Data</span>
           <button
             onClick={() => handleConnect('Avatar')}
             className={`connectButton ${connections.Avatar ? 'connected' : ''}`}
@@ -84,27 +81,34 @@ const LoginAuthentication = () => {
   const [password, setPassword] = useState('');
   const [notification, setNotification] = useState('');
   const [is2FAEnabled, setIs2FAEnabled] = useState(false);
-  const [twoFACode, setTwoFACode] = useState(''); // Store user-entered 2FA code
+  const [twoFACode, setTwoFACode] = useState('');
+  const [showModal, setShowModal] = useState(false); // Add showModal state
 
   const handleLogin = () => {
     if (username === 'jeffdoe@gmail.com' && password === 'password123') {
-      // Enable the 2FA step
       setIs2FAEnabled(true);
-      setNotification('A 2FA code has been sent to your registered email.'); // Simulated notification
+      setNotification('A 2FA code has been sent to your registered email.');
     } else {
       setNotification('Incorrect Email or Password');
     }
   };
 
   const handle2FAVerification = () => {
-    if (twoFACode === '123') { // Fixed dummy code "123" for verification
-      router.push('/mainDashboard'); // Navigate to mainDashboard if 2FA is successful
+    if (twoFACode === '123') {
+      router.push('/mainDashboard');
     } else {
-      // Reset back to login step and show "Wrong Code" message
       setIs2FAEnabled(false);
       setTwoFACode('');
       setNotification('Wrong Code');
     }
+  };
+
+  const handleModalOpen = () => {
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
   };
 
   return (
@@ -121,10 +125,8 @@ const LoginAuthentication = () => {
         </header>
         <h2 className="loginTitle">Log In:</h2>
         
-        {/* Show login fields only if 2FA is not yet enabled */}
         {!is2FAEnabled ? (
           <>
-            {/* Email Textbox */}
             <input
               type="text"
               placeholder="Email"
@@ -132,8 +134,6 @@ const LoginAuthentication = () => {
               onChange={(e) => setUsername(e.target.value)}
               className="queryInput"
             />
-            
-            {/* Password Textbox */}
             <input
               type="password"
               placeholder="Password"
@@ -141,7 +141,6 @@ const LoginAuthentication = () => {
               onChange={(e) => setPassword(e.target.value)}
               className="queryInput"
             />
-            
             <nav>
               {roles.map((role, index) => (
                 <LoginButton key={index} role={role} onClick={handleLogin} />
@@ -150,7 +149,6 @@ const LoginAuthentication = () => {
           </>
         ) : (
           <>
-            {/* 2FA Code Textbox */}
             <input
               type="text"
               placeholder="Enter 2FA Code"
@@ -165,9 +163,11 @@ const LoginAuthentication = () => {
         )}
         
         {notification && <p className="notification">{notification}</p>}
+        <button onClick={handleModalOpen} className="connectDataButton">
+          Link Data Sources
+        </button>
       </section>
 
-      {/* Connection Modal */}
       {showModal && <ConnectionModal onClose={handleModalClose} />}
     </main>
   );
