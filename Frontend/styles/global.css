@@ -515,6 +515,10 @@ h1 {
   .card {
     flex: 1 1 100%;
   }
+
+  .authenticationContainer {
+    padding: 20px;
+  }
 }
 
 
@@ -597,4 +601,55 @@ h1 {
   font-size: 18px;
   font-weight: normal;
   margin-top: 10px;
+}
+
+
+
+.authenticationContainer {
+  border-radius: 15px;
+  background-color: #fafafa;
+  display: flex;
+  width: 400px;
+  max-width: 90%;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loginTitle {
+  color: #003049;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Button Styling */
+.loginButton {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #6194fa;
+  background-color: #6194fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.loginButton:hover {
+  background-color: #4a7de0;
+}
+
+/* Main Authentication Container */
+.loginAuthentication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
