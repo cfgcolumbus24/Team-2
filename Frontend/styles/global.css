@@ -1,3 +1,18 @@
+/* styles/globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #63AFF7;
+  --secondary-color: #6B7280;
+  /* Add any other global variables here */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 html,
 body {
   padding: 0;
@@ -17,16 +32,757 @@ body {
     sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+/* Minimalistic UI styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text color for better readability */
+  padding: 2rem;
+}
+
+/* Container styling */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and headings */
+h1, h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* Input styling */
+input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Patient list and details */
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #63AFF7;
+  cursor: pointer;
+}
+
+/* Button styling */
+button {
+  padding: 0.6rem 1rem;
+  background-color: #63AFF7;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #539ad4;
+}
+
+/* Graph container */
+.graph-container {
+  margin: 1.5rem 0;
+}
+
+/* Last updated text */
+.last-updated {
+  color: #777;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+/* Fullscreen layout with flexbox for minimalistic styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text color */
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.graph-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.graph-container {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.last-updated {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.patients-section {
+  flex: 3;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.patients-list {
+  list-style-type: none;
+  overflow-y: auto;
+  max-height: calc(100vh - 10rem); /* Keep the list from overflowing */
+  padding-right: 1rem;
+}
+
+.patient-item {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.patient-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.patient-item a:hover {
+  color: #63AFF7;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  background-color: #63AFF7;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #539ad4;
+}
+
+/* Container and layout */
+.patient-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.patient-details-container h1 {
+  font-size: 1.8rem;
+  color: #2974E6;
+  margin-bottom: 1rem;
+}
+
+.patient-details-container p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Card styling */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 180px;
+  max-width: 220px;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.card .value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card .status {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.status.normal {
+  background-color: #E0F7FA;
+  color: #00796B;
+}
+
+/* Chart placeholder styling */
+.chart-placeholder {
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+
+/* globals.css or another CSS file */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .text-4xl {
+  font-weight: normal;
+  color: #000000;
+}
+
+header .text-blue-600 {
+  color: #3b82f6; /* Tailwind's blue-600 */
+}
+
+header nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav .text-lg {
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+header nav .font-bold {
+  color: #3b82f6;
+}
+
+header nav div .bg-blue-500 {
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+}
+
+header button {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+header button:hover {
+  background-color: #2563eb; /* Tailwind's blue-700 */
+}
+
+/* Welcome Section */
+section.text-center {
+  padding: 40px 0;
+  background-color: #f8fafc; /* Tailwind's gray-50 */
+}
+
+section.text-center h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #0f172a; /* Tailwind's slate-900 */
+}
+
+section.text-center h1 .font-bold {
+  color: #3b82f6;
+}
+
+section.text-center img {
+  margin-top: 16px;
+  width: 48px;
+  height: 48px;
+}
+
+/* Feature Section */
+section.grid {
+  padding: 20px 8%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  background-color: #ffffff;
+}
+
+section.grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.grid img {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px; /* Rounded corners */
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+section.grid h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+/* Global Settings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f5f9; /* Tailwind's slate-100 */
+}
+
+
+.patient-details-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1 1 calc(33% - 20px);
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: calc(33% - 20px);
+}
+
+.card h3 {
+  font-size: 1.2em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.value {
+  font-size: 1em;
+  color: var(--secondary-color);
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  margin-top: 10px;
+  color: var(--white);
+}
+
+.status.normal {
+  background-color: var(--primary-color);
+}
+
+.chart-placeholder {
+  height: 50px;
+  background-color: var(--background-color);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .authenticationContainer {
+    padding: 20px;
+  }
+}
+
+
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoNumber {
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav .active {
+  font-weight: bold;
+  color: #0070f3;
+}
+
+.loginButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.welcomeText {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.professionals {
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  width: 200px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+
+
+.authenticationContainer {
+  border-radius: 15px;
+  background-color: #fafafa;
+  display: flex;
+  width: 400px;
+  max-width: 90%;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loginTitle {
+  color: #003049;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Button Styling */
+.loginButton {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #6194fa;
+  background-color: #6194fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.loginButton:hover {
+  background-color: #4a7de0;
+}
+
+/* Main Authentication Container */
+.loginAuthentication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+
+.queryInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.queryInput::placeholder {
+  color: var(--secondary-color);
+}
+
+
+.profileContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profileImage {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 70px; /* Adjust to align below profile image */
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profileContainer:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown p, .dropdownLink, .logoutButton {
+  margin: 8px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown p {
+  color: #666;
+}
+
+.dropdownLink {
+  display: block;
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+  padding: 6px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownLink:hover {
+  background-color: rgba(0, 112, 243, 0.1);
+}
+
+.logoutButton {
+  background-color: #ff5f5f;
+  color: white;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #ff4040;
+}
+
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.connectButton {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.connectButton.connected {
+  background-color: #28a745;
+}
+
+.connectButton:not(.connected) {
+  background-color: #0070f3;
 }

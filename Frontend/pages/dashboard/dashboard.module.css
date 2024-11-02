@@ -1,0 +1,567 @@
+.dashboard {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 70px; /* Reduced height */
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.2rem; /* Decreased font size */
+    color: #003049;
+  }
+  
+  .logoText {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoNumber img {
+    width: 30px; /* Adjusted size */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 40px; /* Increased gap for more spacing */
+  }
+  
+  .navItem {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #003049;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .navItem.active {
+    font-weight: bold;
+    border-bottom: 2px solid #003049;
+    padding-bottom: 2px;
+  }
+  
+  .profileImage {
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Adjusted size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+  }
+  
+  
+  .userName {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .userInfo {
+    font-size: 0.75rem;
+    color: #726c6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .separator {
+    width: 2px;
+    height: 0.75rem;
+    background-color: #726c6c;
+  }
+  
+  .locationIcon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  .userStats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  
+  .statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebarNav {
+    margin-top: 1.5rem;
+  }
+  .sidebarNavList {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .navList {
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Align items vertically centered */
+  }
+  
+  .sidebarNavItem {
+    font-size: 1rem;
+    color: #003049;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .sidebarNavItem.active {
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .sidebarNavItem.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ff6161;
+    border-radius: 2px;
+  }
+  
+  .userSummary {
+    font-size: 0.875rem;
+    color: #676d89;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+  
+  .welcomeMessage {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #003049;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  
+  .dailyRead {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .sidebarbox {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 50%; /* Set width to 50% for the left half */
+    float: left; /* Float the box to the left */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+  }
+
+  .maincontentbox {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 50%; /* Set width to 50% for the left half */
+    float: left; /* Float the box to the left */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+  }
+  
+  .sectionTitle {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #003049;
+    margin-bottom: 1rem;
+  }
+  
+  .articlePreview {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .articleImage {
+    width: 16.25rem;
+    height: 6.25rem;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .articleContent {
+    flex: 1;
+  }
+  
+  .articleSummary {
+    font-size: 0.875rem;
+    color: #003049;
+    margin-bottom: 0.5rem;
+  }
+  
+  .readMore {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fafafa;
+    background-color: #003049;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .todaysTasks {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .taskCount {
+    background-color: #6194fa;
+    color: #fafafa;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+  }
+  
+  .taskList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .taskItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  
+  .taskIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 1rem;
+  }
+  
+  .taskDetails {
+    flex: 1;
+  }
+  
+  .taskTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #003049;
+    margin: 0;
+  }
+  
+  .taskTime {
+    font-size: 0.75rem;
+    color: #726c6c;
+  }
+  
+  .taskAction {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .viewAllTasks {
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #003049;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  
+  .statistics {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .statCard {
+    flex: 1;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .statcard {
+    margin: 1rem; /* Space between each stat card */
+    text-align: center; /* Center text for aesthetic */
+  }
+  
+  .statValue {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #001fb5;
+    line-height: 1;
+    margin-top: 10px; /* Add space above the value */
+    display: block; /* Ensures value is treated as a block */
+    margin-bottom: 0.5rem;
+  }
+
+  .statValueSB {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #001fb5;
+    line-height: 1;
+    margin-top: 10px; /* Add space above the value */
+    display: block; /* Ensures value is treated as a block */
+    margin-bottom: 0.5rem;
+  }
+  
+  .statLabel {
+    font-size: 0.75rem;
+    color: #003049;
+    margin-top: 0.5rem;
+    display: block;
+  }
+  
+  .bottomSection {
+    display: flex; /* Align Calendar and PatientList horizontally */
+    gap: 2rem; /* Space between Calendar and PatientList */
+    margin-top: 2rem; /* Space above the bottom section */
+  }
+  
+  .calendar {
+    flex: 5;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .calendarTitle {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #003049;
+  }
+  
+  .addReminder {
+    font-size: 0.875rem;
+    color: #003049;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .calendarDays {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .calendarDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dayName {
+    font-size: 0.8125rem;
+    color: #726c6c;
+  }
+  
+  .dayNumber {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #003049;
+    margin-top: 0.25rem;
+  }
+  
+  .calendarDay.active {
+    background-color: #ff6161;
+    color: #fafafa;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .calendarDay.active .dayName,
+  .calendarDay.active .dayNumber {
+    color: #fafafa;
+  }
+  
+  .appointmentList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .appointmentItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  
+  .appointmentIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 1rem;
+  }
+  
+  .appointmentDetails {
+    flex: 1;
+  }
+  
+  .appointmentTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #003049;
+    margin: 0;
+  }
+  
+  .appointmentPatient {
+    font-size: 0.75rem;
+    color: #003049;
+    margin: 0.25rem 0;
+  }
+  
+  .appointmentTime {
+    font-size: 0.625rem;
+    color: #676d89;
+  }
+  
+  .patientList {
+    flex: 10;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .patientListTitle {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #003049;
+    margin-bottom: 1rem;
+  }
+  
+  .patientItems {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .patientItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  
+  .patientAvatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  
+  .patientInfo {
+    flex: 1;
+  }
+  
+  .patientName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #003049;
+    margin: 0;
+  }
+  
+  .lastVisit {
+    font-size: 0.75rem;
+    color: #726c6c;
+  }
+  
+  .clinicalRecordBtn {
+    background-color: #6194fa;
+    color: #fafafa;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    .header {
+      padding: 1rem;
+    }
+  
+    .mainContent {
+      background-color: #ffffff; /* Optional: Background color */
+      border: 1px solid #f0f0f2; /* Optional: Border for visual separation */
+      border-radius: 12px; /* Optional: Rounded corners */
+      padding: 1rem; /* Optional: Padding */
+      float: right; /* Float the box to the right */
+      margin-left: 20px; /* Add left margin for spacing */
+      box-sizing: border-box; /* Include padding and border in element's total width */
+  }  
+  
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #f0f0f2;
+      margin-bottom: 1rem;
+    }
+
+    .sidebarAndMain {
+      display: flex; /* Align Sidebar and MainContent horizontally */
+      gap: 2rem; /* Space between Sidebar and MainContent */
+    }
+  
+    .contentWrapper {
+      display: flex; 
+      flex-direction: column; /* Stack Sidebar/MainContent and bottomSection vertically */
+      margin: 0 auto; /* Centers the wrapper horizontally */
+      width: calc(100% - 80px); /* Adjusts width to account for margins */
+      max-width: 1000px; /* Optional: Limits the maximum width */
+      padding: 20px; /* Inner padding */
+      box-sizing: border-box; /* Ensures padding is included in width */
+    }
+  
+  
+    .statistics {
+      flex-direction: column;
+    }
+  
+    .statNValue {
+      font-size: 1.5rem; /* Increase the font size */
+      color: #6194fa; /* Set the color to blue */
+      display: block; /* Ensure it's a block element to stack with the label */
+    }
+    
+    .statNLabel {
+      font-size: 0.75rem; /* Keep the label font size smaller */
+      color: #000000; /* Existing color or modify as needed */
+      display: block; /* Stack below the value */
+    }
+    
+    
+  }
+
+  

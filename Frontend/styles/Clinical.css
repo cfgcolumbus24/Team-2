@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #63AFF7;
+  --secondary-color: #6B7280;
+  --background-color: #F9FAFB;
+  --white: #FFFFFF;
+  --border-color: #E5E7EB;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+.dashboardContainer {
+  padding: 40px;
+}
+
+.graphSection {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.graphSection h1 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: 2.5em;
+}
+
+.graphContainer {
+  height: 350px;
+}
+
+.lastUpdated {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: var(--secondary-color);
+}
+
+.patientsSection {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.searchFilter {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.searchBar,
+.filterDropdown {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+}
+
+.searchBar::placeholder,
+.filterDropdown {
+  color: var(--secondary-color);
+}
+
+.patientsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.patientItem {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.patientItem:last-child {
+  border-bottom: none;
+}
+
+.patientLink {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.patientLink:hover {
+  color: var(--secondary-color);
+}
+
+.llmQuery {
+  margin-top: 40px;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.llmQuery h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.queryInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.queryInput::placeholder {
+  color: var(--secondary-color);
+}
+
+.queryResponse {
+  font-size: 1em;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .searchFilter {
+    flex-direction: column;
+  }
+
+  .searchBar,
+  .filterDropdown {
+    width: 100%;
+  }
+}

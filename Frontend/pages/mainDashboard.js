@@ -8,7 +8,7 @@ import styles from './dashboard/dashboard.module.css';
 
 const mainDashboard = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', }}>
       <Header />
       <h2 className={styles.welcomeMessage}>Welcome Dr. Doe!</h2>
       <div style={{ display: 'flex', flexGrow: 1, padding: '20px',  }}>

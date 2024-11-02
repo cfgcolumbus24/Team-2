@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "superadmin",
+      "age": "25",
+      "height": "176cm",
+      "weight": "86kg",
+      "summary": "John is a 25-year-old male with no known allergies or drug sensitivities. He has a history of seasonal allergies and occasional migraines. He takes no medications regularly.",
+      "conditions": [
+        "Seasonal Allergies",
+        "Migraines"
+      ],
+      "notes": [
+        "Experiences mild symptoms in the spring and fall. No regular medication needed.",
+        "Occasional migraines managed with over-the-counter pain relievers. No prescribed medication."
+      ],
+      "tasks": [
+        "Consultation with George Gill",
+        "Medication Review for Laura Lewis",
+        "Check Mary Clark test results"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "role": "clinician",
+      "age": "29",
+      "height": "165cm",
+      "weight": "60kg",
+      "summary": "Jane is a 29-year-old female clinician. She has no known medical conditions and no allergies.",
+      "conditions": [],
+      "notes": [],
+      "tasks": [
+        "Consultation with George Gill",
+        "Medication Review for Laura Lewis",
+        "Check Mary Clark test results"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Robert Brown",
+      "email": "robert@example.com",
+      "role": "director",
+      "age": "45",
+      "height": "180cm",
+      "weight": "78kg",
+      "summary": "Robert is a 45-year-old male director with a background in healthcare administration. He manages high-level operations and strategic planning.",
+      "conditions": [
+        "Hypertension"
+      ],
+      "notes": [
+        "Monitors blood pressure daily and takes prescribed medication to manage hypertension."
+      ],
+      "tasks": [
+        "Review quarterly performance reports",
+        "Attend leadership meeting",
+        "Approve budget proposals"
+      ]
+    }
+  ]
