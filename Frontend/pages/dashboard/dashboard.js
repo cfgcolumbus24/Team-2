@@ -10,16 +10,12 @@ const dashboard = () => {
   return (
     <div className={styles.dashboard}>
       <Header />
-      <main className={styles.mainContent}>
+      <div className={styles.mainContentContainer}>
         <Sidebar />
         <div className={styles.contentWrapper}>
           <MainContent />
-          <div className={styles.bottomSection}>
-            <Calendar />
-            <PatientList />
-          </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 };

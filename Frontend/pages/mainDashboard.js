@@ -10,16 +10,26 @@ const Dashboard = () => {
   return (
     <div className={styles.dashboard}>
       <Header />
-      <main className={styles.mainContent}>
+      <h2 className={styles.welcomeMessage}>Welcome Dr. Doe!</h2>
+      <div className={styles.contentWrapper}>
+        {/* Add space before the Sidebar */}
+        <div style={{ marginBottom: '20px' }}></div>
         <Sidebar />
-        <div className={styles.contentWrapper}>
-          <MainContent />
-          <div className={styles.bottomSection}>
-            <Calendar />
-            <PatientList />
-          </div>
+        
+        {/* Add space between Sidebar and MainContent */}
+        <div style={{ marginBottom: '20px' }}></div>
+        <MainContent />
+        
+        <div className={styles.bottomSection}>
+          {/* Add space before the Calendar */}
+          <div style={{ marginBottom: '20px' }}></div>
+          <Calendar />
+          
+          {/* Add space between Calendar and PatientList */}
+          <div style={{ marginBottom: '20px' }}></div>
+          <PatientList />
         </div>
-      </main>
+      </div>
     </div>
   );
 };

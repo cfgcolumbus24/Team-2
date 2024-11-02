@@ -3,8 +3,8 @@ import styles from './dashboard.module.css';
 
 const MainContent = () => {
   return (
-    <section className={styles.mainContent}>
-      <h2 className={styles.welcomeMessage}>Welcome Dr. Doe!</h2>
+    <div className={styles.maincontentbox}>
+    <section className={styles.mainContent}> 
       <div className={styles.dailyRead}>
         <h3 className={styles.sectionTitle}>Daily Read</h3>
         <article className={styles.articlePreview}>
@@ -52,6 +52,7 @@ const MainContent = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

@@ -100,15 +100,15 @@
   }
   
   .statLabel {
-    font-size: 0.75rem;
+    font-size: 0.75rem; /* Keep this the same */
     color: #726c6c;
   }
   
   .statValue {
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 0.85rem; /* Increased from 0.75rem to 0.85rem */
+    font-weight: 500;
     color: #003049;
-  }
+  }  
   
   .sidebarNav {
     margin-top: 1.5rem;
@@ -117,12 +117,18 @@
     list-style-type: none;
     padding: 0;
   }
+
+  .navList {
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Align items vertically centered */
+  }
   
   .sidebarNavItem {
     font-size: 1rem;
     color: #003049;
     padding: 0.5rem 0;
     cursor: pointer;
+    margin-right: 20px;
   }
   
   .sidebarNavItem.active {
@@ -148,16 +154,13 @@
     margin-top: 1rem;
   }
   
-  .contentWrapper {
-    flex: 1;
-    padding-left: 2rem;
-  }
-  
   .welcomeMessage {
     font-size: 2.25rem;
     font-weight: 700;
     color: #003049;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
   }
   
   .dailyRead {
@@ -166,6 +169,17 @@
     border-radius: 12px;
     padding: 1rem;
     margin-bottom: 2rem;
+  }
+
+  .sidebarbox {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 50%; /* Set width to 50% for the left half */
+    float: left; /* Float the box to the left */
+    box-sizing: border-box; /* Include padding and border in element's total width */
   }
   
   .sectionTitle {
@@ -290,11 +304,13 @@
   }
   
   .statValue {
-    font-size: 6rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #001fb5;
     line-height: 1;
-  }
+    margin-top: 10px; /* Add space above the value */
+}
+
   
   .statLabel {
     font-size: 1rem;
@@ -480,9 +496,15 @@
     }
   
     .mainContent {
-      flex-direction: column;
-      padding: 1rem;
-    }
+      background-color: #ffffff; /* Optional: Background color */
+      border: 1px solid #f0f0f2; /* Optional: Border for visual separation */
+      border-radius: 12px; /* Optional: Rounded corners */
+      padding: 1rem; /* Optional: Padding */
+      width: 50%; /* Set width to 50% for the right half */
+      float: right; /* Float the box to the right */
+      margin-left: 20px; /* Add left margin for spacing */
+      box-sizing: border-box; /* Include padding and border in element's total width */
+  }  
   
     .sidebar {
       width: 100%;
@@ -492,18 +514,25 @@
     }
   
     .contentWrapper {
-      padding-left: 0;
+      display: flex; 
+      flex-direction: column; 
+      flex-grow: 1; 
+      margin: 0 40px; /* Add 40px margin on left and right */
+      max-width: 1000px; /* Limits the maximum width */
+      padding: 20px; /* Inner padding */
+      box-sizing: border-box; /* Ensures padding is included in width */
+      width: 100%; /* Full width to utilize margin effectively */
     }
+  
   
     .statistics {
       flex-direction: column;
     }
   
     .bottomSection {
-      flex-direction: column;
+      display: flex; /* Aligns Calendar and PatientList horizontally */
+      gap: 20px; /* Adds space between Calendar and PatientList */
     }
   
-    .statValue {
-      font-size: 2.5rem;
-    }
+    
   }
