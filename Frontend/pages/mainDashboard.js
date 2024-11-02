@@ -12,21 +12,12 @@ const Dashboard = () => {
       <Header />
       <h2 className={styles.welcomeMessage}>Welcome Dr. Doe!</h2>
       <div className={styles.contentWrapper}>
-        {/* Add space before the Sidebar */}
-        <div style={{ marginBottom: '20px' }}></div>
-        <Sidebar />
-        
-        {/* Add space between Sidebar and MainContent */}
-        <div style={{ marginBottom: '20px' }}></div>
-        <MainContent />
-        
+        <div className={styles.sidebarAndMain}>
+          <Sidebar />
+          <MainContent />
+        </div>
         <div className={styles.bottomSection}>
-          {/* Add space before the Calendar */}
-          <div style={{ marginBottom: '20px' }}></div>
           <Calendar />
-          
-          {/* Add space between Calendar and PatientList */}
-          <div style={{ marginBottom: '20px' }}></div>
           <PatientList />
         </div>
       </div>

@@ -181,6 +181,17 @@
     float: left; /* Float the box to the left */
     box-sizing: border-box; /* Include padding and border in element's total width */
   }
+
+  .maincontentbox {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 50%; /* Set width to 50% for the left half */
+    float: left; /* Float the box to the left */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+  }
   
   .sectionTitle {
     font-size: 1.375rem;
@@ -319,9 +330,9 @@
   }
   
   .bottomSection {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
+    display: flex; /* Align Calendar and PatientList horizontally */
+    gap: 2rem; /* Space between Calendar and PatientList */
+    margin-top: 2rem; /* Space above the bottom section */
   }
   
   .calendar {
@@ -512,26 +523,25 @@
       border-bottom: 1px solid #f0f0f2;
       margin-bottom: 1rem;
     }
+
+    .sidebarAndMain {
+      display: flex; /* Align Sidebar and MainContent horizontally */
+      gap: 2rem; /* Space between Sidebar and MainContent */
+    }
   
     .contentWrapper {
       display: flex; 
-      flex-direction: column; 
-      flex-grow: 1; 
-      margin: 0 40px; /* Add 40px margin on left and right */
-      max-width: 1000px; /* Limits the maximum width */
+      flex-direction: column; /* Stack Sidebar/MainContent and bottomSection vertically */
+      margin: 0 auto; /* Centers the wrapper horizontally */
+      width: calc(100% - 80px); /* Adjusts width to account for margins */
+      max-width: 1000px; /* Optional: Limits the maximum width */
       padding: 20px; /* Inner padding */
       box-sizing: border-box; /* Ensures padding is included in width */
-      width: 100%; /* Full width to utilize margin effectively */
     }
   
   
     .statistics {
       flex-direction: column;
-    }
-  
-    .bottomSection {
-      display: flex; /* Aligns Calendar and PatientList horizontally */
-      gap: 20px; /* Adds space between Calendar and PatientList */
     }
   
     
