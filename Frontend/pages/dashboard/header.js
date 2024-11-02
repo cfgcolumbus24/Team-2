@@ -28,6 +28,9 @@ const Header = () => {
         <Link href="/financial" className={`${styles.navItem} ${router.pathname === '/financial' ? styles.active : ''}`}>
           Financial
         </Link>
+        <Link href="/predictions" className={`${styles.navItem} ${router.pathname === '/predictions' ? styles.active : ''}`}>
+        Predictions
+        </Link>
       </nav>
       <div className={styles.profileContainer}>
         <img 

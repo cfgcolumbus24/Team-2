@@ -74,7 +74,7 @@ export default function Clinical({ initialPatients }) {
       {
         label: 'Patients Seen',
         data: [5, 6, 8, 7, 4, 3, 9],
-        borderColor: '#4F46E5',
+        borderColor: '#63AFF7',
         tension: 0.4,
       },
     ],
