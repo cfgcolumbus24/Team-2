@@ -111,11 +111,13 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .learnMoreButton:hover {
   background-color: #3b3dbf; 
+  text-decoration: underline;
   transform: scale(1.05); 
 }
 
