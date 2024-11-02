@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Line } from 'react-chartjs-2';
+import Header from './dashboard/header';
+
 import {
   Chart as ChartJS,
   LineElement,
@@ -128,7 +130,11 @@ export default function Clinical({ initialPatients }) {
   };
 
   return (
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Header />
     <div className="dashboardContainer">
+   
+
       <div className="mainContent">
         <div className="graphSection">
           <h1>Clinician Dashboard</h1>
@@ -215,6 +221,7 @@ export default function Clinical({ initialPatients }) {
           className="queryInput"
         />
         <p className="queryResponse">{queryResponse}</p>
+      </div>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
+import Header from './dashboard/header';
+
 import { Bar, Pie } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -266,6 +268,8 @@ const expenseData2022 = {
   
 
   return (
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Header />
     <div className={styles.container}>
       {/* Financial Impact Section */}
       <div className={styles.statsSection}>
@@ -336,6 +340,7 @@ const expenseData2022 = {
         />
         <p className="queryResponse">{queryResponse}</p>
       </div>
+    </div>
     </div>
     
   );  

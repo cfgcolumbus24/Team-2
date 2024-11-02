@@ -12,14 +12,14 @@ const Calendar = () => {
   return (
     <section className={styles.calendar}>
       <header className={styles.calendarHeader}>
-        <h3 className={styles.calendarTitle}>March 2024</h3>
+        <h3 className={styles.calendarTitle}>October 2024</h3>
         <button className={styles.addReminder}>Add reminder</button>
       </header>
       <div className={styles.calendarDays}>
         {['Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, index) => (
-          <div key={index} className={`${styles.calendarDay} ${day === 'Wed' ? styles.active : ''}`}>
+          <div key={index} className={`${styles.calendarDay} ${day === 'Sat' ? styles.active : ''}`}>
             <span className={styles.dayName}>{day}</span>
-            <span className={styles.dayNumber}>{9 + index}</span>
+            <span className={styles.dayNumber}>{index +1}</span>
           </div>
         ))}
       </div>

@@ -1,16 +1,25 @@
-// pages/index.js
-import Link from 'next/link';
+import React from 'react';
+import Header from './dashboard/header';
+import Sidebar from './dashboard/sidebar';
+import MainContent from './dashboard/maincontent';
+import Calendar from './dashboard/calendar';
+import PatientList from './dashboard/patientlist';
+import styles from './dashboard/dashboard.module.css';
 
-export default function HomePage() {
+const mainDashboard = () => {
   return (
-    <div>
-      <h1>Welcome to the Company Website</h1>
-      <p>Explore our latest features and financial insights.</p>
-
-      {/* Link to Financial Page */}
-      <Link href="/financial" style={{ padding: '10px', fontSize: '16px', color: 'blue', textDecoration: 'underline' }}>
-        Go to Financial Dashboard
-      </Link>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Header />
+      <h2 className={styles.welcomeMessage}>Welcome Dr. Doe!</h2>
+      <div style={{ display: 'flex', flexGrow: 1, padding: '20px',  }}>
+        <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
+          <Calendar />
+          <MainContent />
+          <PatientList />
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default mainDashboard;
