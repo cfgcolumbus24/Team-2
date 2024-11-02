@@ -15,6 +15,7 @@ import html2canvas from 'html2canvas';
 import styles from '../styles/financial.module.css';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
+//Register Elements
 ChartJS.register(BarElement, ArcElement, CategoryScale, LinearScale, Tooltip, Legend, ChartDataLabels);
 
 export default function FinancialPage() {
@@ -39,7 +40,7 @@ export default function FinancialPage() {
 
   if (!Array.isArray(data) || data.length === 0) return <p>Loading data...</p>;
 
-  // Extract data for charts
+  //Extract data
   const revenueLabels = data.map((item) => item['Revenue Source']);
   const expenseLabels = data.map((item) => item['Expense Category']).filter(Boolean);
   const assetsLabels = data.map((item) => item['Assets']).filter(Boolean);
@@ -53,7 +54,7 @@ export default function FinancialPage() {
   const assets2021 = data.map((item) => parseFloat(item['2021 Assets']) || 0).filter((value) => !isNaN(value));
   const assets2022 = data.map((item) => parseFloat(item['2022 Assets']) || 0).filter((value) => !isNaN(value));
 
-  // Bar chart data for revenue comparison across years
+  //Bar chart data for revenue
   const revenueData = {
     labels: revenueLabels,
     datasets: [
@@ -63,18 +64,18 @@ export default function FinancialPage() {
     ],
   };
 
-  // Disable datalabels for revenue and assets charts
+  //Disable datalabels for revenue and assets charts
   const barOptions = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       datalabels: {
-        display: false, // Hide datalabels on bar charts
+        display: false,
       },
     },
   };
 
-  // Pie chart data for 2022 expenses with percentage labels
+  //Pie chart data for expenses
 const expenseData2022 = {
     labels: expenseLabels,
     datasets: [
@@ -117,7 +118,7 @@ const expenseData2022 = {
   };
   
 
-  // Bar chart data for assets comparison across years
+  //Bar chart data for assets
   const assetsData = {
     labels: assetsLabels,
     datasets: [
@@ -130,11 +131,11 @@ const expenseData2022 = {
   const generateReport = async () => {
     const doc = new jsPDF("p", "pt", "a4");
   
-    // First Page - Table of Financial Data
+    //First Page - Table of Financial Data
     doc.setFontSize(18);
     doc.text("2022 Financial Overview", 40, 40);
   
-    // Revenue Table Data
+    //Revenue Table Data
     const revenueRows = data.slice(0, 9).map((item) => [
       item['Revenue Source'],
       `$${item['2020']}`,
@@ -142,7 +143,7 @@ const expenseData2022 = {
       `$${item['2022']}`
     ]);
   
-    // Expense Table Data
+    //Expense Table Data
     const expenseRows = data.slice(0, 5).map((item) => [
       item['Expense Category'],
       `$${item['2020 Expenses']}`,
@@ -150,7 +151,7 @@ const expenseData2022 = {
       `$${item['2022 Expenses']}`
     ]);
   
-    // Assets Table Data - Filter out rows with undefined or missing asset values
+    //Assets Table Data
     const assetsRows = data
       .filter((item) => item['Assets'] && item['2020 Assets'] && item['2021 Assets'] && item['2022 Assets'])
       .map((item) => [
@@ -160,7 +161,7 @@ const expenseData2022 = {
         `$${item['2022 Assets']}`
       ]);
   
-    // Add Revenue Table
+    //Add Revenue Table
     doc.setFontSize(14);
     doc.text("Revenue", 40, 70);
     autoTable(doc, {
@@ -173,7 +174,7 @@ const expenseData2022 = {
       margin: { left: 40, right: 40 },
     });
   
-    // Add Expense Table
+    //Add Expense Table
     const expenseStartY = doc.autoTable.previous.finalY + 20;
     doc.text("Expenses", 40, expenseStartY);
     autoTable(doc, {
@@ -186,7 +187,7 @@ const expenseData2022 = {
       margin: { left: 40, right: 40 },
     });
   
-    // Add Assets Table
+    //Add Assets Table
     const assetsStartY = doc.autoTable.previous.finalY + 20;
     doc.text("Assets", 40, assetsStartY);
     autoTable(doc, {
@@ -199,12 +200,12 @@ const expenseData2022 = {
       margin: { left: 40, right: 40 },
     });
   
-    // Second Page - Charts
+    //Second Page - Charts
     doc.addPage();
     doc.setFontSize(18);
     doc.text("2022 Financial Overview - Charts", 40, 40);
   
-    // Capture and add revenue chart
+    //Capture and add revenue chart
     const revenueCanvas = await html2canvas(revenueChartRef.current);
     const revenueImage = revenueCanvas.toDataURL("image/png");
     const revenueWidth = 500;
@@ -212,7 +213,7 @@ const expenseData2022 = {
     const revenueHeight = revenueWidth / revenueAspectRatio;
     doc.addImage(revenueImage, "PNG", 40, 80, revenueWidth, revenueHeight);
   
-    // Capture and add expense chart
+    //Capture and add expense chart
     const expenseCanvas = await html2canvas(expenseChartRef.current);
     const expenseImage = expenseCanvas.toDataURL("image/png");
     const expenseWidth = 500;
@@ -220,7 +221,7 @@ const expenseData2022 = {
     const expenseHeight = expenseWidth / expenseAspectRatio;
     doc.addImage(expenseImage, "PNG", 40, 480, expenseWidth, expenseHeight);
   
-    // Capture and add assets chart
+    //Capture and add assets chart
     const assetsCanvas = await html2canvas(assetsChartRef.current);
     const assetsImage = assetsCanvas.toDataURL("image/png");
     const assetsWidth = 500;
@@ -228,7 +229,7 @@ const expenseData2022 = {
     const assetsHeight = assetsWidth / assetsAspectRatio;
     doc.addImage(assetsImage, "PNG", 40, 880, assetsWidth, assetsHeight);
   
-    // Save the PDF
+    //Save the PDF
     doc.save("financial_report_2022.pdf");
   };
   
