@@ -10,8 +10,8 @@ export default function Footer() {
         <Image src={logo} alt="Company Logo" className={styles.footerLogo} />
 
         <div className={styles.topLinks}>
-          <button className={styles.footerButton}>Find Help</button>
-          <button className={styles.footerButton}>Donate</button>
+          <button className={styles.footerButton1}>Find Help</button>
+          <button className={styles.footerButton2}>Donate</button>
         </div>
       </div>
 
@@ -48,19 +48,19 @@ export default function Footer() {
 
       <div className={styles.footerBottom}>
         <a href="#link1" className={styles.footerImageLink}>
-          <img src="/link-to-image1.png" alt="Link 1" className={styles.footerImage} />
+          <img src="/image1_ADAMH.png" alt="Link 1" className={styles.footerImage} />
         </a>
         <a href="#link2" className={styles.footerImageLink}>
-          <img src="/link-to-image2.png" alt="Link 2" className={styles.footerImage} />
+          <img src="/image2_CSB.png" alt="Link 2" className={styles.footerImage} />
         </a>
         <a href="#link3" className={styles.footerImageLink}>
-          <img src="/link-to-image3.png" alt="Link 3" className={styles.footerImage} />
+          <img src="/image3_HSC.png" alt="Link 3" className={styles.footerImage} />
         </a>
         <a href="#link4" className={styles.footerImageLink}>
-          <img src="/link-to-image4.png" alt="Link 4" className={styles.footerImage} />
+          <img src="/image4_CWC.png" alt="Link 4" className={styles.footerImage} />
         </a>
         <a href="#link5" className={styles.footerImageLink}>
-          <img src="/link-to-image5.png" alt="Link 5" className={styles.footerImage} />
+          <img src="/image5_rainbow.png" alt="Link 5" className={styles.footerImage} />
         </a>
       </div>
       <p className={styles.copyright}>© 2024 Netcare Access</p>

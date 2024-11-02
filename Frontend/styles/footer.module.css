@@ -21,15 +21,27 @@
   gap: 1rem;
 }
 
-.footerButton {
-  background-color: #3b82f6;
+.footerButton1 {
+  background-color: #3081E2;
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 0.6rem 1.2rem;
+  padding: 0px 23px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.footerButton2 {
+  background-color: #C0E4FC;
+  color: #0A487C;
+  border: none;
+  border-radius: 4px;
+  padding: 0px 23px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0px 0px 0px 20px
 }
 
 .footerButton:hover {
