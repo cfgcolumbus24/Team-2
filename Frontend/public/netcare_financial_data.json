@@ -1,0 +1,92 @@
+[
+    {
+        "Revenue Source": "ADAMH Franklin County Levy Funds",
+        "2020": "8777405",
+        "2021": "8431733",
+        "2022": "8123153",
+        "Expense Category": "Emergency Services",
+        "2020 Expenses": "12601105",
+        "2021 Expenses": "12582715",
+        "2022 Expenses": "12672521"
+    },
+    {
+        "Revenue Source": "State of Ohio",
+        "2020": "3243850",
+        "2021": "3869832",
+        "2022": "3896643",
+        "Expense Category": "Forensic and Family Psychology",
+        "2020 Expenses": "1258945",
+        "2021 Expenses": "1373002",
+        "2022 Expenses": "1363704"
+    },
+    {
+        "Revenue Source": "Medicaid & Medicare",
+        "2020": "2199125",
+        "2021": "2335877",
+        "2022": "2310267",
+        "Expense Category": "Residential/Treatment Services",
+        "2020 Expenses": "1006754",
+        "2021 Expenses": "1099387",
+        "2022 Expenses": "1088634"
+    },
+    {
+        "Revenue Source": "Federal Government",
+        "2020": "40725",
+        "2021": "25363",
+        "2022": "2122625",
+        "Expense Category": "General & Administrative",
+        "2020 Expenses": "2504913",
+        "2021 Expenses": "2984173",
+        "2022 Expenses": "2960630"
+    },
+    {
+        "Revenue Source": "Community Shelter Board",
+        "2020": "451182",
+        "2021": "750374",
+        "2022": "791270",
+        "Expense Category": "Total Expenses",
+        "2020 Expenses": "17371717",
+        "2021 Expenses": "18039277",
+        "2022 Expenses": "18085489"
+    },
+    {
+        "Revenue Source": "Court & Forensic Fee for Service",
+        "2020": "313670",
+        "2021": "294892",
+        "2022": "315774",
+        "Expense Category": "",
+        "2020 Expenses": "",
+        "2021 Expenses": "",
+        "2022 Expenses": ""
+    },
+    {
+        "Revenue Source": "Foundation/Individual Contributions",
+        "2020": "108289",
+        "2021": "133209",
+        "2022": "147514",
+        "Expense Category": "",
+        "2020 Expenses": "",
+        "2021 Expenses": "",
+        "2022 Expenses": ""
+    },
+    {
+        "Revenue Source": "Other",
+        "2020": "40454",
+        "2021": "80452",
+        "2022": "72942",
+        "Expense Category": "",
+        "2020 Expenses": "",
+        "2021 Expenses": "",
+        "2022 Expenses": ""
+    },
+    {
+        "Revenue Source": "PPP/COVID Relief Funds",
+        "2020": "3459267",
+        "2021": "2355081",
+        "2022": "270652",
+        "Expense Category": "",
+        "2020 Expenses": "",
+        "2021 Expenses": "",
+        "2022 Expenses": ""
+    }
+]
