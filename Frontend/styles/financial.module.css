@@ -1,0 +1,50 @@
+.container {
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .summaryContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .revenueText {
+    font-size: 1.2em;
+    color: #27ae60;
+  }
+  
+  .expensesText {
+    font-size: 1.2em;
+    color: #e74c3c;
+  }
+  
+  .chartSection {
+    margin-top: 30px;
+    text-align: center;
+    color: #34495e;
+  }
+  
+  .chartContainer {
+    max-width: 600px;
+    height: 400px;
+    margin: auto;
+  }
+  
+  .generateReportButton {
+    display: block;
+    margin: 2rem auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

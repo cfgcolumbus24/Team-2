@@ -12,20 +12,20 @@ import {
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import html2canvas from 'html2canvas';
+import styles from '../styles/financial.module.css'; 
 
 ChartJS.register(BarElement, ArcElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 export default function FinancialPage() {
-  const [data, setData] = useState([]); // Initialize as an empty array
+  const [data, setData] = useState([]);
   const revenueChartRef = useRef(null);
   const expenseChartRef = useRef(null);
 
-  // Fetch JSON data directly from the public folder
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('/netcare_financial_data.json'); // Fetch directly from public folder
+      const response = await fetch('/netcare_financial_data.json');
       const json = await response.json();
-      
+
       if (Array.isArray(json)) {
         setData(json);
       } else {
@@ -37,7 +37,6 @@ export default function FinancialPage() {
 
   if (!Array.isArray(data) || data.length === 0) return <p>Loading data...</p>;
 
-  // Extract data for charts
   const revenueLabels = data.map((item) => item['Revenue Source']);
   const expenseLabels = data.map((item) => item['Expense Category']).filter(Boolean);
 
@@ -47,7 +46,6 @@ export default function FinancialPage() {
 
   const expenses2022 = data.map((item) => parseFloat(item['2022 Expenses']) || 0).filter((value) => !isNaN(value));
 
-  // Bar chart data for revenue comparison across years
   const revenueData = {
     labels: revenueLabels,
     datasets: [
@@ -57,7 +55,6 @@ export default function FinancialPage() {
     ],
   };
 
-  // Pie chart data for 2022 expenses
   const expenseData2022 = {
     labels: expenseLabels,
     datasets: [
@@ -72,11 +69,9 @@ export default function FinancialPage() {
   const generateReport = async () => {
     const doc = new jsPDF("p", "pt", "a4");
 
-    // First Page - Table of Financial Data
     doc.setFontSize(18);
     doc.text("2022 Financial Overview", 40, 40);
 
-    // Revenue Table Data
     const revenueRows = data.slice(0, 9).map((item) => [
       item['Revenue Source'],
       `$${item['2020']}`,
@@ -84,7 +79,6 @@ export default function FinancialPage() {
       `$${item['2022']}`
     ]);
 
-    // Expense Table Data
     const expenseRows = data.slice(0, 5).map((item) => [
       item['Expense Category'],
       `$${item['2020 Expenses']}`,
@@ -92,7 +86,6 @@ export default function FinancialPage() {
       `$${item['2022 Expenses']}`
     ]);
 
-    // Add Revenue Table
     doc.setFontSize(14);
     doc.text("Revenue", 40, 70);
     autoTable(doc, {
@@ -105,7 +98,6 @@ export default function FinancialPage() {
       margin: { left: 40, right: 40 },
     });
 
-    // Add Expense Table
     const expenseStartY = doc.autoTable.previous.finalY + 20;
     doc.text("Expenses", 40, expenseStartY);
     autoTable(doc, {
@@ -118,18 +110,15 @@ export default function FinancialPage() {
       margin: { left: 40, right: 40 },
     });
 
-    // Add Total Revenue and Total Expenses
     const totalStartY = doc.autoTable.previous.finalY + 20;
     doc.setFontSize(12);
     doc.text(`Total Revenue (2022): $${data[8]?.['2022']}`, 40, totalStartY + 20);
     doc.text(`Total Expenses (2022): $${data[4]?.['2022 Expenses']}`, 40, totalStartY + 40);
 
-    // Second Page - Charts
     doc.addPage();
     doc.setFontSize(18);
     doc.text("2022 Financial Overview - Charts", 40, 40);
 
-    // Capture and add revenue chart
     const revenueCanvas = await html2canvas(revenueChartRef.current);
     const revenueImage = revenueCanvas.toDataURL("image/png");
     const revenueWidth = 500;
@@ -137,7 +126,6 @@ export default function FinancialPage() {
     const revenueHeight = revenueWidth / revenueAspectRatio;
     doc.addImage(revenueImage, "PNG", 40, 80, revenueWidth, revenueHeight);
 
-    // Capture and add expense chart
     const expenseCanvas = await html2canvas(expenseChartRef.current);
     const expenseImage = expenseCanvas.toDataURL("image/png");
     const expenseWidth = 500;
@@ -145,64 +133,45 @@ export default function FinancialPage() {
     const expenseHeight = expenseWidth / expenseAspectRatio;
     doc.addImage(expenseImage, "PNG", 40, 480, expenseWidth, expenseHeight);
 
-    // Save the PDF
     doc.save("financial_report_2022.pdf");
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1 style={{ textAlign: 'center', color: '#2c3e50' }}>Financial Dashboard</h1>
+    <div className={styles.container}>
+      <h1 className={styles.header}>Financial Dashboard</h1>
 
-      {/* Financial Summary */}
-      <div style={{
-        display: 'flex', justifyContent: 'space-around', marginTop: '20px', textAlign: 'center',
-      }}>
+      <div className={styles.summaryContainer}>
         <div>
           <h3>Total Revenue (2022)</h3>
-          <p style={{ fontSize: '1.2em', color: '#27ae60' }}>${data[8]?.['2022']}</p>
+          <p className={styles.revenueText}>${data[8]?.['2022']}</p>
         </div>
         <div>
           <h3>Total Expenses (2022)</h3>
-          <p style={{ fontSize: '1.2em', color: '#e74c3c' }}>${data[4]?.['2022 Expenses']}</p>
+          <p className={styles.expensesText}>${data[4]?.['2022 Expenses']}</p>
         </div>
       </div>
 
-      {/* Revenue Chart */}
       <section>
-        <h2 style={{ textAlign: 'center', marginTop: '30px', color: '#34495e' }}>Revenue Comparison by Year</h2>
-        <div ref={revenueChartRef} style={{ maxWidth: '600px', height: '400px', margin: 'auto' }}>
+        <h2 className={styles.chartSection}>Revenue Comparison by Year</h2>
+        <div ref={revenueChartRef} className={styles.chartContainer}>
           <Bar data={revenueData} options={{ responsive: true, maintainAspectRatio: false }} />
         </div>
       </section>
 
-      {/* Expenses Chart */}
       <section style={{ marginTop: '2rem' }}>
-        <h2 style={{ textAlign: 'center', color: '#34495e' }}>2022 Expenses Distribution</h2>
-        <div ref={expenseChartRef} style={{ maxWidth: '600px', height: '400px', margin: 'auto' }}>
+        <h2 className={styles.chartSection}>2022 Expenses Distribution</h2>
+        <div ref={expenseChartRef} className={styles.chartContainer}>
           <Pie data={expenseData2022} options={{ responsive: true, maintainAspectRatio: false }} />
         </div>
       </section>
 
-      {/* Generate Report Button */}
-      <button 
-        onClick={generateReport} 
-        style={{
-          display: 'block', 
-          margin: '2rem auto', 
-          padding: '10px 20px', 
-          fontSize: '1em', 
-          backgroundColor: '#3498db',
-          color: '#fff', 
-          border: 'none', 
-          borderRadius: '5px', 
-          cursor: 'pointer'
-        }}
-      >
+      <button onClick={generateReport} className={styles.generateReportButton}>
         Generate Report
       </button>
     </div>
   );
 }
+
 
 
 
