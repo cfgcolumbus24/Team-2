@@ -1,6 +1,6 @@
 .container {
   padding: 20px;
-  background: linear-gradient(135deg, #e0f7fa, #e1effa); 
+  background: linear-gradient(135deg, #daf1f4, #b7d8f1); 
   position: relative;
   min-height: 100vh;
   overflow: hidden;
@@ -74,8 +74,8 @@
   text-align: center;
   padding: 2rem; 
   background-color: #e2e8f0; 
-  border-radius: 12px;
-  width: 150px; 
+  border-radius: 20 px;
+  width: 220px; 
   transition: transform 0.3s ease, background-color 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
