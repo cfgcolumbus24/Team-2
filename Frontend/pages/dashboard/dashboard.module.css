@@ -313,20 +313,27 @@
     padding: 1rem;
     text-align: center;
   }
+
+  .statcard {
+    margin: 1rem; /* Space between each stat card */
+    text-align: center; /* Center text for aesthetic */
+  }
   
   .statValue {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #001fb5;
     line-height: 1;
     margin-top: 10px; /* Add space above the value */
-}
-
+    display: block; /* Ensures value is treated as a block */
+    margin-bottom: 0.5rem;
+  }
   
   .statLabel {
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #003049;
     margin-top: 0.5rem;
+    display: block;
   }
   
   .bottomSection {
@@ -336,7 +343,7 @@
   }
   
   .calendar {
-    flex: 1;
+    flex: 5;
     background-color: #fafafa;
     border: 1px solid #f0f0f2;
     border-radius: 12px;
@@ -441,7 +448,7 @@
   }
   
   .patientList {
-    flex: 1;
+    flex: 10;
     background-color: #fafafa;
     border: 1px solid #f0f0f2;
     border-radius: 12px;
@@ -511,7 +518,6 @@
       border: 1px solid #f0f0f2; /* Optional: Border for visual separation */
       border-radius: 12px; /* Optional: Rounded corners */
       padding: 1rem; /* Optional: Padding */
-      width: 50%; /* Set width to 50% for the right half */
       float: right; /* Float the box to the right */
       margin-left: 20px; /* Add left margin for spacing */
       box-sizing: border-box; /* Include padding and border in element's total width */
@@ -544,5 +550,17 @@
       flex-direction: column;
     }
   
+    .statNValue {
+      font-size: 1.5rem; /* Increase the font size */
+      color: #6194fa; /* Set the color to blue */
+      display: block; /* Ensure it's a block element to stack with the label */
+    }
+    
+    .statNLabel {
+      font-size: 0.75rem; /* Keep the label font size smaller */
+      color: #000000; /* Existing color or modify as needed */
+      display: block; /* Stack below the value */
+    }
+    
     
   }

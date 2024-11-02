@@ -60,6 +60,7 @@ const Sidebar = () => {
           </ul>
         </nav>
         <p className={styles.userSummary} style={{ textAlign: 'center', marginTop: '20px' }}>
+        
         Dr. Jeffery Doe is a healthcare professional specializing in psychological health. At 25 years old, he resides in New York, USA, where he employs a compassionate approach to his practice. Dr. Doe’s profile highlights key health statistics, including a blood type of O+, a height of 176 cm, and a weight of 86 kg. He has a history of seasonal allergies and occasional migraines but currently takes no medications regularly. With a focus on mental well-being, Dr. Doe is dedicated to improving patient outcomes and enhancing accessibility to psychological healthcare services.
         </p>
       </aside>

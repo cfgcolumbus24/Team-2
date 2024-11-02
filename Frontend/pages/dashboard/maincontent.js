@@ -45,12 +45,17 @@ const MainContent = () => {
           { value: "64", label: "Calls Handled" },
           { value: "10", label: "Patients Satisfied" }
         ].map((stat, index) => (
-          <div key={index} className={styles.statCard}>
+
+          <div key={index} className={styles.statcard}>
+            <section className={styles.mainContent}>
             <span className={styles.statValue}>{stat.value}</span>
             <span className={styles.statLabel}>{stat.label}</span>
+            </section>
           </div>
+          
         ))}
       </div>
+
     </section>
     </div>
   );
