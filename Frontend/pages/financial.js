@@ -13,8 +13,9 @@ import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import html2canvas from 'html2canvas';
 import styles from '../styles/financial.module.css';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-ChartJS.register(BarElement, ArcElement, CategoryScale, LinearScale, Tooltip, Legend);
+ChartJS.register(BarElement, ArcElement, CategoryScale, LinearScale, Tooltip, Legend, ChartDataLabels);
 
 export default function FinancialPage() {
   const [data, setData] = useState([]);
@@ -62,8 +63,19 @@ export default function FinancialPage() {
     ],
   };
 
-  // Pie chart data for 2022 expenses
-  const expenseData2022 = {
+  // Disable datalabels for revenue and assets charts
+  const barOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      datalabels: {
+        display: false, // Hide datalabels on bar charts
+      },
+    },
+  };
+
+  // Pie chart data for 2022 expenses with percentage labels
+const expenseData2022 = {
     labels: expenseLabels,
     datasets: [
       {
@@ -73,6 +85,37 @@ export default function FinancialPage() {
       },
     ],
   };
+  
+  const expenseOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => {
+            const total = expenses2022.reduce((acc, value) => acc + value, 0);
+            const value = tooltipItem.raw;
+            const percentage = ((value / total) * 100).toFixed(2);
+            return `${tooltipItem.label}: $${value} (${percentage}%)`;
+          },
+        },
+      },
+      datalabels: {
+        color: '#000',
+        formatter: (value, context) => {
+          const total = context.chart.data.datasets[0].data.reduce((acc, val) => acc + val, 0);
+          const percentage = ((value / total) * 100).toFixed(1) + '%';
+          return percentage;
+        },
+        anchor: 'end',
+        align: 'start',
+        offset: 10,
+        backgroundColor: (context) => context.dataset.backgroundColor[context.dataIndex],
+        padding: { top: 2, bottom: 2, left: 8, right: 8 }
+      },
+    },
+  };
+  
 
   // Bar chart data for assets comparison across years
   const assetsData = {
@@ -209,7 +252,7 @@ export default function FinancialPage() {
       <section>
         <h2 className={styles.chartSection}>Revenue Comparison by Year</h2>
         <div ref={revenueChartRef} className={styles.chartContainer}>
-          <Bar data={revenueData} options={{ responsive: true, maintainAspectRatio: false }} />
+          <Bar data={revenueData} options={barOptions} />
         </div>
       </section>
 
@@ -217,15 +260,16 @@ export default function FinancialPage() {
       <section style={{ marginTop: '2rem' }}>
         <h2 className={styles.chartSection}>2022 Expenses Distribution</h2>
         <div ref={expenseChartRef} className={styles.chartContainer}>
-          <Pie data={expenseData2022} options={{ responsive: true, maintainAspectRatio: false }} />
+            <Pie data={expenseData2022} options={expenseOptions} />
         </div>
       </section>
+
 
       {/* Assets Chart */}
       <section style={{ marginTop: '2rem' }}>
         <h2 className={styles.chartSection}>Assets Comparison by Year</h2>
         <div ref={assetsChartRef} className={styles.chartContainer}>
-          <Bar data={assetsData} options={{ responsive: true, maintainAspectRatio: false }} />
+          <Bar data={assetsData} options={barOptions} />
         </div>
       </section>
 
