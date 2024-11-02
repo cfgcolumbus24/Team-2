@@ -169,6 +169,18 @@
   margin: 0 auto;
 }
 
+.llmQuery {
+  margin-top: 40px;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.llmQuery h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
 
 
   
