@@ -1,79 +1,104 @@
 /* General Styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9fafb;
+  background-color: #003049; /* Matches dark blue background */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* Header Styling */
-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #f0f1f2;
-  border-bottom: 1px solid #d1d5db;
+  height: 100vh;
 }
 
-header .text-4xl {
+/* Main Authentication Container */
+.loginAuthentication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.authenticationContainer {
+  border-radius: 15px;
+  background-color: #fafafa;
+  display: flex;
+  width: 400px;
+  max-width: 90%;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo and Header */
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   color: #111827;
-}
-
-header .font-bold {
   font-weight: 700;
+  text-align: center;
 }
 
-/* Welcome Section */
-section {
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
+.logoText {
+  font-size: 24px;
+  color: #003049;
+  margin-right: 5px;
 }
 
-section .text-4xl {
+.logoNumber {
+  font-family: 'Caveat', cursive; /* Using a script-style font for the "2" */
   font-size: 2rem;
-  font-weight: 300;
-  color: #111827;
+  color: #003049;
 }
 
-section .font-bold {
-  font-weight: 700;
-  color: #111827;
+.loginTitle {
+  color: #003049;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-section img {
-  width: 32px; /* Smaller size for stethoscope icon */
-  margin-left: 10px;
+/* Button Styling */
+.loginButton {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #6194fa;
+  background-color: #6194fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-weight: 600;
+  text-align: center;
 }
 
-/* Feature Section */
-.feature-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding: 0 40px 40px;
+.loginButton:hover {
+  background-color: #4a7de0;
 }
 
-.feature-item {
-  display: flex;
-  align-items: center;
-  text-align: left;
+@media (max-width: 991px) {
+  .authenticationContainer {
+    padding: 20px;
+  }
 }
 
-.feature-item img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.feature-item .text-lg {
-  font-size: 1rem; /* Adjusted font size for feature text */
-  font-weight: 400; /* Normal weight for feature text */
-  color: #111827;
-  margin-left: 20px;
+/* Adjusted styles for the logo image */
+.logoImage {
+  width: 300px; /* Adjust width as needed */
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 1px; /* Space below the logo */
 }
