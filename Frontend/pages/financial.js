@@ -23,6 +23,7 @@ export default function FinancialPage() {
   const revenueChartRef = useRef(null);
   const expenseChartRef = useRef(null);
   const assetsChartRef = useRef(null);
+  const [queryResponse, setQueryResponse] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -232,6 +233,36 @@ const expenseData2022 = {
     //Save the PDF
     doc.save("financial_report_2022.pdf");
   };
+
+  const handleQuery = async (question) => {
+    try {
+      const response = await fetch(
+        'http://ec2-3-91-148-179.compute-1.amazonaws.com:3000/api/openai',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            type: 'financial',
+            "prompt": question
+          }),
+        }
+      );
+      
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      // Format the response to place each numbered item on a new line
+    const formattedResponse = data.response.replace(/(\d+\.)/g, '\n$1');
+      setQueryResponse(formattedResponse || "No relevant data found.");
+    } catch (error) {
+      console.error("Failed to fetch query response:", error);
+      setQueryResponse("Error retrieving response. Please try again.");
+    }
+  };
   
 
   return (
@@ -294,7 +325,19 @@ const expenseData2022 = {
           </div>
         </div>
       </section>
+
+      <div className="llmQuery">
+        <h2>Natural Language Query</h2>
+        <input
+          type="text"
+          placeholder="Ask about financial data"
+          onKeyDown={(e) => e.key === 'Enter' && handleQuery(e.target.value)}
+          className="queryInput"
+        />
+        <p className="queryResponse">{queryResponse}</p>
+      </div>
     </div>
+    
   );  
 }
 

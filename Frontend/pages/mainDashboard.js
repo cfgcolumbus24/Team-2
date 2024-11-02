@@ -12,16 +12,9 @@ const mainDashboard = () => {
       <Header />
       <h2 className={styles.welcomeMessage}>Welcome Dr. Doe!</h2>
       <div style={{ display: 'flex', flexGrow: 1, padding: '20px',  }}>
-        <div style={{ flex: '1', marginRight: '20px'}}> {/* Sidebar and MainContent container */}
-          <Sidebar />
-          <section></section>
-          <MainContent />
-        </div>
-      </div>
-      
-      <div style={{ display: 'flex', flexDirection: 'row', flexGrow: '0' }}> {/* Bottom section container */}
         <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
           <Calendar />
+          <MainContent />
           <PatientList />
         </div>
       </div>
