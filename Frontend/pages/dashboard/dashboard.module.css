@@ -1,0 +1,553 @@
+.dashboard {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background-color: #fafafa;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .navigation {
+    display: flex;
+  }
+  
+  .navList {
+    display: flex;
+    list-style-type: none;
+    gap: 1.5rem;
+  }
+  
+  .navItem {
+    font-size: 1rem;
+    color: #003049;
+    cursor: pointer;
+  }
+  
+  .navItem.active {
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .navItem.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #6194fa;
+    border-radius: 2px;
+  }
+  
+  .userActions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .iconButton {
+    background: #6194fa;
+    border: none;
+    border-radius: 12px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .userAvatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+  }
+  
+  .mainContent {
+    display: flex;
+    padding: 2rem;
+  }
+  
+  .sidebar {
+    width: 20rem;
+    padding: 1rem;
+    background-color: #fafafa;
+    border-right: 1px solid #f0f0f2;
+  }
+  
+  .companyLogo {
+    width: 7.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .userProfile {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .profileImage {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .userName {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .userInfo {
+    font-size: 0.75rem;
+    color: #726c6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .separator {
+    width: 2px;
+    height: 0.75rem;
+    background-color: #726c6c;
+  }
+  
+  .locationIcon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  .userStats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  
+  .statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .statLabel {
+    font-size: 0.75rem;
+    color: #726c6c;
+  }
+  
+  .statValue {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #003049;
+  }
+  
+  .sidebarNav {
+    margin-top: 1.5rem;
+  }
+  .sidebarNavList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebarNavItem {
+    font-size: 1rem;
+    color: #003049;
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .sidebarNavItem.active {
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .sidebarNavItem.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ff6161;
+    border-radius: 2px;
+  }
+  
+  .userSummary {
+    font-size: 0.875rem;
+    color: #676d89;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+  
+  .contentWrapper {
+    flex: 1;
+    padding-left: 2rem;
+  }
+  
+  .welcomeMessage {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #003049;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dailyRead {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #003049;
+    margin-bottom: 1rem;
+  }
+  
+  .articlePreview {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .articleImage {
+    width: 16.25rem;
+    height: 6.25rem;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .articleContent {
+    flex: 1;
+  }
+  
+  .articleSummary {
+    font-size: 0.875rem;
+    color: #003049;
+    margin-bottom: 0.5rem;
+  }
+  
+  .readMore {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fafafa;
+    background-color: #003049;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .todaysTasks {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .taskCount {
+    background-color: #6194fa;
+    color: #fafafa;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+  }
+  
+  .taskList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .taskItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  
+  .taskIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 1rem;
+  }
+  
+  .taskDetails {
+    flex: 1;
+  }
+  
+  .taskTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #003049;
+    margin: 0;
+  }
+  
+  .taskTime {
+    font-size: 0.75rem;
+    color: #726c6c;
+  }
+  
+  .taskAction {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .viewAllTasks {
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #003049;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  
+  .statistics {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .statCard {
+    flex: 1;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .statValue {
+    font-size: 6rem;
+    font-weight: 600;
+    color: #001fb5;
+    line-height: 1;
+  }
+  
+  .statLabel {
+    font-size: 1rem;
+    color: #003049;
+    margin-top: 0.5rem;
+  }
+  
+  .bottomSection {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .calendar {
+    flex: 1;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .calendarTitle {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #003049;
+  }
+  
+  .addReminder {
+    font-size: 0.875rem;
+    color: #003049;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .calendarDays {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .calendarDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dayName {
+    font-size: 0.8125rem;
+    color: #726c6c;
+  }
+  
+  .dayNumber {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #003049;
+    margin-top: 0.25rem;
+  }
+  
+  .calendarDay.active {
+    background-color: #ff6161;
+    color: #fafafa;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .calendarDay.active .dayName,
+  .calendarDay.active .dayNumber {
+    color: #fafafa;
+  }
+  
+  .appointmentList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .appointmentItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  
+  .appointmentIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 1rem;
+  }
+  
+  .appointmentDetails {
+    flex: 1;
+  }
+  
+  .appointmentTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #003049;
+    margin: 0;
+  }
+  
+  .appointmentPatient {
+    font-size: 0.75rem;
+    color: #003049;
+    margin: 0.25rem 0;
+  }
+  
+  .appointmentTime {
+    font-size: 0.625rem;
+    color: #676d89;
+  }
+  
+  .patientList {
+    flex: 1;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f2;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .patientListTitle {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #003049;
+    margin-bottom: 1rem;
+  }
+  
+  .patientItems {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .patientItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  
+  .patientAvatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  
+  .patientInfo {
+    flex: 1;
+  }
+  
+  .patientName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #003049;
+    margin: 0;
+  }
+  
+  .lastVisit {
+    font-size: 0.75rem;
+    color: #726c6c;
+  }
+  
+  .clinicalRecordBtn {
+    background-color: #6194fa;
+    color: #fafafa;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    .header {
+      padding: 1rem;
+    }
+  
+    .mainContent {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #f0f0f2;
+      margin-bottom: 1rem;
+    }
+  
+    .contentWrapper {
+      padding-left: 0;
+    }
+  
+    .statistics {
+      flex-direction: column;
+    }
+  
+    .bottomSection {
+      flex-direction: column;
+    }
+  
+    .statValue {
+      font-size: 2.5rem;
+    }
+  }
