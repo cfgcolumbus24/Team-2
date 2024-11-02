@@ -26,7 +26,7 @@ export default function AboutUs() {
           </span>
         </h1>
         <nav className={styles.nav}>
-        <a onClick={router.push('/home')} className={styles.navItem}>
+          <a onClick={() => router.push('/home')} className={styles.navItem}>
             Home
           </a>
           <a onClick={() => router.push('/aboutus')} className={`${styles.navItem} ${styles.active}`}>
