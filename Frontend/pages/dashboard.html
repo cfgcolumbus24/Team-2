@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex; /* Use flexbox to align items in a row */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Distribute space between items */
+            padding: 10px 20px;
+            background-color: #333; /* Background color */
+            color: #fff; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+
+        /* Logo */
+        .logo img {
+            height: 50px; /* Height of the logo */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex; /* Use flexbox for horizontal layout */
+            gap: 20px; /* Space between links */
+            list-style-type: none; /* Remove default list style */
+        }
+
+        .nav-links li a {
+            color: #fff; /* Link color */
+            text-decoration: none; /* Remove underline */
+            font-size: 18px; /* Font size */
+            transition: color 0.3s ease; /* Transition effect on hover */
+        }
+
+        .nav-links li a:hover {
+            color: #ddd; /* Change color on hover */
+        }
+
+        /* Profile Button */
+        .profile-button img {
+            width: 40px; /* Size of the profile image */
+            height: 40px; /* Size of the profile image */
+            border-radius: 50%; /* Make it circular */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: transform 0.2s ease; /* Transition effect */
+        }
+
+        .profile-button img:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="/Frontend/pages/Logo.png" alt="Logo" />
+        </div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#clinical">Clinical</a></li>
+            <li><a href="#financial">Financial</a></li>
+            <li><a href="#profile">Profile</a></li>
+        </ul>
+
+        <!-- Profile Image Button -->
+        <div class="profile-button">
+            <img src="/Frontend/pages/ProfileImage.png" alt="Profile" />
+        </div>
+    </nav>
+</body>
+</html>
