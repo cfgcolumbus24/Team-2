@@ -285,7 +285,7 @@ export default function Clinical({ initialPatients }) {
 export async function getServerSideProps() {
   try {
     const response = await fetch(
-      ''
+      'http://ec2-3-91-148-179.compute-1.amazonaws.com:3000/data/patient'
     );
     const data = await response.json();
     return { props: { initialPatients: data } };

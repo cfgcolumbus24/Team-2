@@ -30,17 +30,7 @@ const PatientList = () => {
   }, []);
 
   // Define a list of default avatars to match patient data with an avatar
-  const defaultAvatars = [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ];
+  const defaultAvatars = [];
 
   return (
     <section className={styles.patientList}>

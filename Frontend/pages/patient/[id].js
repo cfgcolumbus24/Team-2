@@ -69,7 +69,7 @@ export async function getServerSideProps(context) {
   const { id } = context.params;
 
   try {
-    const response = await fetch('');
+    const response = await fetch('http://ec2-3-91-148-179.compute-1.amazonaws.com:3000/data/patient');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
